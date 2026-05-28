@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product - Seepure</title>
+
+<style>
+:root{
+  --bg:#0b0d0e;
+  --text:#fff;
+  --muted:#a7b0b3;
+}
+
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial;
+  background:var(--bg);
+  color:var(--text);
+}
+
+/* NAV */
+header{
+  position:fixed;
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  padding:20px 40px;
+  background:rgba(0,0,0,0.4);
+  backdrop-filter:blur(10px);
+  z-index:10;
+}
+
+a{color:#fff;text-decoration:none}
+
+/* HERO IMAGE */
+.hero{
+  margin-top:80px; /* 👈 往下移 */
+  height:70vh;
+  background:url('https://images.unsplash.com/photo-1505691938895-1758d7feb511?q=80&w=1600&fm=jpg') center/cover no-repeat;
+}
+
+/* MAIN INFO */
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:60px 20px;
+}
+
+.product-header{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+}
+
+.product-header h1{
+  font-size:40px;
+  margin:0;
+}
+
+.description{
+  color:var(--muted);
+  line-height:1.8;
+}
+
+.meta{
+  margin-top:20px;
+  font-size:14px;
+  color:#ccc;
+}
+
+.button{
+  margin-top:30px;
+  padding:12px 24px;
+  border:1px solid #fff;
+  display:inline-block;
+  cursor:pointer;
+  transition:.3s;
+}
+.button:hover{
+  background:#fff;
+  color:#000;
+}
+
+/* DETAIL IMAGES */
+.details{
+  margin-top:80px;
+  display:grid;
+  gap:40px;
+}
+
+.detail{
+  display:grid;
+  grid-template-columns:1.2fr 1fr;
+  gap:40px;
+  align-items:center;
+}
+
+.detail img{
+  width:100%;
+  border-radius:6px;
+}
+
+.detail-text{
+  color:var(--muted);
+  line-height:1.6;
+}
+
+/* ALTERNATE LAYOUT */
+.detail:nth-child(even){
+  grid-template-columns:1fr 1.2fr;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+  .hero{height:50vh}
+
+  .product-header{
+    grid-template-columns:1fr;
+  }
+
+  .detail{
+    grid-template-columns:1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div>SEEPURE</div>
+  <a href="dining.html">Back</a>
+</header>
+
+<!-- 主图 -->
+<section class="hero"></section>
+
+<!-- 产品信息 -->
+<div class="container">
+
+  <div class="product-header">
+    
+    <h1>Marble Dining Table</h1>
+
+    <div>
+      <p class="description">
+        Crafted from natural marble, each piece reveals unique veining and timeless texture.
+        Designed for contemporary interiors, balancing minimalism with material expression.
+      </p>
+
+      <div class="meta">
+        Material: Natural Marble<br>
+        Size: 120 x 60 cm<br>
+        Finish: Honed Surface
+      </div>
+
+      <div class="button">Contact</div>
+    </div>
+
+  </div>
+
+  <!-- 产品细节模块 -->
+  <div class="details">
+
+    <div class="detail">
+      <img src="https://images.unsplash.com/photo-1493666438817-866a91353ca9?q=80&w=1200&fm=jpg">
+      <div class="detail-text">
+        Each marble slab features natural variations, making every piece one of a kind.
+      </div>
+    </div>
+
+    <div class="detail">
+      <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=1200&fm=jpg">
+      <div class="detail-text">
+        Carefully polished surface enhances the depth and richness of the material.
+      </div>
+    </div>
+
+    <div class="detail">
+      <img src="https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=1200&fm=jpg">
+      <div class="detail-text">
+        Designed to integrate seamlessly into modern living spaces.
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>
