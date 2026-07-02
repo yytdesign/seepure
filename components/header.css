@@ -1,0 +1,340 @@
+/* =========================
+   HEADER - SAFE FIX VERSION
+   保持你原布局，只修问题
+========================= */
+
+/* ===== 字体（不动你的体系） ===== */
+.header,
+.header a {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC",
+    "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* =========================
+   HEADER BASE（保持原风格）
+========================= */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 50px; /* 保持你原来的视觉高度 */
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    transition: all 0.4s ease;
+}
+
+.header.scrolled {
+    padding-top: 0;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+}
+
+/* =========================
+   INNER（只修结构，不改设计）
+========================= */
+.header-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 25px 60px; /* 保持你原始比例 */
+    position: relative;
+}
+
+/* =========================
+   NAV（保持原 spacing）
+========================= */
+.nav-left,
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* 保持你的间距 */
+}
+
+/* =========================
+   MENU LINK（不改视觉）
+========================= */
+.nav-left a,
+.nav-right a {
+    position: relative;
+    text-decoration: none;
+    color: rgb(41,41,41);
+    font-size: 14px; /* 保持原大小 */
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding-bottom: 4px;
+}
+
+/* 下划线 */
+.nav-left a::after,
+.nav-right a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 0;
+    background: currentColor;
+    transition: width 0.3s ease;
+}
+
+.nav-left a:hover::after,
+.nav-right a:hover::after {
+    width: 100%;
+}
+
+/* =========================
+   LOGO（关键修复点！！！）
+   ⚠️ 修复你说的“变大问题”
+========================= */
+.logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+/* 🚨 修复点：禁止继承异常变大 */
+.logo a {
+    font-size: 26px !important; /* 锁死你的原设计 */
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: #000;
+    text-decoration: none;
+    line-height: 1;
+}
+
+/* =========================
+   DROPDOWN（保持原结构）
+========================= */
+.nav-item {
+    position: relative;
+}
+
+.dropdown {
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+
+    background: rgba(255,255,255,0.98);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+}
+
+.nav-item:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown a {
+    position: relative;
+
+    display: inline-flex;   /* ✔ 比 inline-block 更稳定 */
+    align-items: center;
+
+    padding: 8px 0;         /* ❗不要左右 padding */
+    margin-left: 20px;      /* 保持缩进 */
+
+    font-size: 13px;
+    color: #333;
+    text-decoration: none;
+
+    width: fit-content;     /* ✔ 强制文字宽度 */
+    font-kerning: normal;
+    font-variant-ligatures: common-ligatures;
+}
+.dropdown a::after {
+    content: "";
+    position: absolute;
+
+    left: 0;
+    bottom: 4px;
+
+    height: 1px;
+    width: 0;
+
+    background: currentColor;
+
+    transition: width 0.25s ease;
+
+    white-space: nowrap;
+}
+
+.dropdown a:hover::after {
+    width: 100%;
+}
+/* =========================
+   ICON（保留你原尺寸）
+========================= */
+.icon-btn img {
+    width: 38px;
+    height: 22px;
+    display: block;
+}
+
+/* =========================
+   HAMBURGER
+========================= */
+.menu-toggle {
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    line-height:1;
+    color: #111;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.menu-toggle.active{
+    transform:translateY(-50%) rotate(90deg);
+}
+
+/* =========================
+   MOBILE MENU
+========================= */
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 280px;
+    height: 100vh;
+    background: #fff;
+    flex-direction: column;
+    padding: 80px 24px 24px;
+    box-shadow: -10px 0 30px rgba(0,0,0,0.08);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 1999;
+    align-items: flex-start;
+}
+
+.mobile-menu.active {
+    display: flex;
+    transform: translateX(0);
+}
+
+.mobile-menu a {
+    display: inline-block;
+    width: fit-content;
+    position: relative;
+    padding: 14px 0;
+    margin-bottom: 8px;
+    
+    text-decoration: none;
+    color: #111;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    margin: 6px 0;
+}
+.mobile-menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    width: 0;
+    height: 1px;
+    background: currentColor;
+    transition: width .25s ease;
+}
+.mobile-menu a:hover::after,
+.mobile-menu a:focus::after,
+.mobile-menu a:active::after {
+    width: 100%;
+
+}
+
+.mobile-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.25);
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 0.25s ease;
+    z-index: 1998;
+}
+
+.mobile-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* =========================
+   TABLET
+========================= */
+@media (max-width: 1024px) {
+    .header-inner {
+        padding: 18px 30px;
+    }
+
+    .nav-left,
+    .nav-right {
+        gap: 20px;
+    }
+
+    .logo a {
+        font-size: 24px; /* 只轻微缩小 */
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 768px) {
+
+    .header {
+        padding-top: 0;
+    }
+
+    .header-inner {
+        height: 70px;
+        padding: 0 20px;
+    }
+
+    .nav-left,
+    .nav-right {
+        display: none !important;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .logo a {
+        font-size: 20px; /* 控制比例，不夸张 */
+    }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+@media (max-width: 375px) {
+    .header-inner {
+        padding: 0 12px;
+    }
+
+    .logo a {
+        font-size: 18px;
+    }
+}

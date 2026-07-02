@@ -1,0 +1,231 @@
+
+
+/* ===== HERO 视频===== */
+/* 假設你的頁面內容最大寬度是 1200px */
+.content-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    max-width: 1400px;
+    max-height: 800px;
+    margin: 40px auto 140px;     /* 添加上下邊距 */
+    
+    overflow: hidden;
+    border-radius: 0;
+   
+    box-shadow: 0 6px 30px rgba(0,0,0,0.08); /* 可選：添加陰影 */
+}
+
+.hero video {
+    position: absolute;
+    inset: 0;
+    
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 如果需要控制視頻高度 */
+.hero {
+    aspect-ratio: 16 / 9;  /* 強制 16:9 比例 */
+}
+
+.hero video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 保持 hero 容器為相對定位 */
+.hero {
+    position: relative;
+}
+
+.hero-text {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 2;
+
+    color: #fff;
+    font-size: 48px;
+    text-align: center;
+
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+/* ========================================== */
+/* 7. 模块5 & 6：左右图文混排
+/* ========================================== */
+.split-content{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    max-width:520px;
+    margin: 140px auto 140px;
+}
+.split-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    margin: 0 auto 140px;
+    max-width: 1100px;
+
+    padding: 0 24px;
+}
+
+.split-image {
+    width: 100%;
+    border-radius: 0;
+    overflow: hidden;
+}
+
+.split-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.split-title {
+    font-size: 1.9em;
+    font-weight: 450;
+    letter-spacing: 0.5px;
+    color: #111;
+    margin-bottom: 18px;
+}
+.split-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    
+
+}
+.split-description {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #444;
+    max-width: 520px;
+    margin-bottom: 25px;
+}
+
+.split-link {
+    display: inline-block;
+    width: auto;
+    align-self: flex-start;
+    color: #1a1714;
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #d0c8be;
+    padding-bottom: 5px;
+    transform: 0.3s ease;
+    transition: border-color 0.2s;
+    
+}
+
+.split-link:hover {
+    border-bottom-color: #111;
+    
+    transform: translateY(-1px);
+}
+
+.image-right {
+    direction: rtl;
+}
+
+.image-right .split-text,
+.image-right .split-image {
+    direction: ltr;
+}
+
+@media (max-width: 1024px) {
+
+    .hero {
+        height: 600px;
+        
+    }
+
+    .hero-text {
+        font-size: 36px;
+    }
+
+    .split-block {
+        gap: 40px;
+       
+    }
+
+    .split-title {
+        font-size: 1.7em;
+    }
+}
+@media (max-width: 768px) {
+
+    /* HERO */
+    .hero {
+        margin: 20px auto 80px;
+       
+    }
+
+    .hero-text {
+        font-size: 26px;
+        padding: 0 20px;
+    }
+    .split-content {
+        margin: 90px 10px;
+    }
+    /* SPLIT layout 改成上下结构 */
+    .split-block {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-bottom: 90px;
+    }
+
+     /* ❗彻底避免 order 混乱 */
+    .image-right {
+        direction: ltr;
+    }
+
+    .split-title {
+        font-size: 1.4em;
+    }
+
+    .split-description {
+        font-size: 14px;
+    }
+}
+@media (max-width: 480px) {
+
+    .hero {
+        max-height: 320px;
+    }
+
+    .hero-text {
+        font-size: 20px;
+    }
+
+    .split-block {
+        padding: 0 10px;
+        gap: 10px;
+    }
+
+    
+}

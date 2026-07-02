@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seepure | Home</title>
+    
+    <!-- 主样式 -->
+    <link rel="stylesheet" href="style.css">
+    
+    
+    <!-- 组件样式 - 按照你的路径 components/ -->
+    <link rel="stylesheet" href="components/header.css">
+    <link rel="stylesheet" href="components/footer.css">
+    <link rel="stylesheet" href="index.css">
+   
+    
+    <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+    <!-- header 会加载到这里 -->
+    <div id="header-container"></div>
+
+    <!-- HERO 视频-->
+    <section class="panel hero">
+        <video autoplay muted loop playsinline>
+            <source src="https://cdn.jsdelivr.net/gh/yytdesign/webtu/yytu/marble%20plate-index.MOV">
+        </video>
+        <div class="hero-text">
+            <h1>Seepure Design</h1>
+        </div>
+    </section>
+
+    <!-- 过渡 -->
+    <div class="section-transition"></div>
+
+    <!-- 内容模块 -->
+    <section class="split-section">
+        <div class="container">
+            <div class="split-image">
+                <img src="https://cdn.jsdelivr.net/gh/yytdesign/webtu/yytu/sp-main-leaves-01.png">
+            </div>
+            <div class="split-content">
+                <h2>See Natural</h2>
+                <p>To"see"is more then just to look,it is to preceive to encounter,and to reconnect.<br><br>
+                    In a world framed by concrete and pixels, we have grown accustomed to measuring life through screens, 
+                    yet we have slowly lost the feel of morning dew and the whisper of the monsoon. The "See Natural" collection 
+                    is not an attempt to replicate wilderness, but rather a commitment to carving a window through the noise of 
+                    urban existence—a window that leads you back to authenticity.
+
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- Card Section -->
+    <section class="news-card" id="newsCard">
+      <div class="news-card-inner">
+        <div class="news-content">
+        <span class="category">NEWS</span>
+        <h2>See Natural ｜ Vein</h2>
+        <p>
+        We believe that nature is not merely the distant mountains and oceans; it lives in the grain of a wooden surface, 
+        the warmth held in a piece of ceramic, and the subtle scent of herbs carried on the breeze. This is a series about 
+        return—to the purity of materials, to the sincerity of craftsmanship, and to the primal calmness of life. When you 
+        hold these objects, you are not possessing nature; you are allowing nature to see you once again.
+       </p>
+        <a href="product-knife holder.html" class="discover-link">Discover &rarr;</a>
+       </div>
+       <div class="news-image">
+           <img src="https://cdn.jsdelivr.net/gh/yytdesign/webtu/yytu/main.jpg" alt="45 Sofa">
+       </div>
+
+      </div>
+    </section>
+
+
+
+     <!-- ========================================== -->
+        <!-- 模块6：右边文字 + 左边图片   加image-right                -->
+        <!-- ========================================== -->
+        <div class="split-block image-right">
+            <div class="split-text">
+                <h3 class="split-title">Sustainable Materials</h3>
+                <p class="split-description">
+                    We are committed to using only the finest sustainable materials. From responsibly sourced wood to eco-friendly 
+                    upholstery, every component is chosen with care for both quality and environmental impact.
+                </p>
+                <a href="product-fruit plate.html" class="split-link">Discover our materials →</a>
+            </div>
+            <div class="split-image">
+                <img src="https://cdn.jsdelivr.net/gh/yytdesign/webtu/yytu/marble%20fruit%20plate.JPG" alt="Sustainable materials">
+            </div>
+        </div>
+    <!-- ========================================== -->
+        <!-- 模块6：左边文字 + 右边图片                   -->
+        <!-- ========================================== -->
+        <div class="split-block">
+            <div class="split-text">
+                <h3 class="split-title">Sustainable Materials</h3>
+                <p class="split-description">
+                    We are committed to using only the finest sustainable materials. From responsibly sourced wood to eco-friendly 
+                    upholstery, every component is chosen with care for both quality and environmental impact.
+                </p>
+                <a href="#" class="split-link">Discover our materials →</a>
+            </div>
+            <div class="split-image">
+                <img src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=800" alt="Sustainable materials">
+            </div>
+
+        </div>
+    <!-- 横向滚动 -->
+    <section class="horizontal">
+        <div class="horizontal-container">
+          <button class="scroll-btn left">&#8592;</button>
+            <div class="horizontal-track">
+                <div class="card">
+                    <img src="https://cdn.jsdelivr.net/gh/yytdesign/webtu/yytu/main.jpg">
+                    <h3>Chair</h3>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=800">
+                    <h3>Sofa</h3>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=800">
+                    <h3>Table</h3>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=800">
+                    <h3>Cabinet</h3>
+                </div>
+                <div class="card">
+                  <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=800">
+                  <h3>Cabinet</h3>
+              </div>
+            </div>
+          <button class="scroll-btn right">&#8594;</button>
+        </div>
+    </section>
+    
+    <div class="scroll-top"></div>
+    <a href="index.html" class="floating-logo">SP</a>
+
+    <!-- footer 会加载到这里 -->
+    <div id="footer-container"></div>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+
+</body>
+</html>

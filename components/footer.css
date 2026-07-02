@@ -1,0 +1,152 @@
+/* =========================
+   FOOTER 基础
+========================= */
+
+/* 基础重置 */
+.footer * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.footer {
+    background: #f5f5f5;
+    color: #111;
+    margin-top: 120px;
+    width: 100%;
+}
+
+/* =========================
+   内部容器（和header统一宽度）
+========================= */
+.footer-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 80px 60px;
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+}
+
+/* =========================
+   品牌区
+========================= */
+.footer-brand h2 {
+    font-size: 30px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.footer-brand p {
+    font-size: 14px;
+    color: #666;
+    max-width: 500px;
+    line-height: 1.6;
+}
+
+/* =========================
+   链接区
+========================= */
+.footer-links {
+    display: flex;
+    gap: 80px;
+    flex-wrap: wrap;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 120px;
+}
+
+.footer-col h4 {
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    color: #666;
+    font-weight: 600;
+}
+
+.footer-col a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #111;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+    cursor: pointer;  /* 添加手型光标 */
+}
+
+.footer-col a:hover {
+    opacity: 1;
+    color: #000;
+    transform: translateX(3px);  /* 可选：悬停时轻微右移 */
+}
+
+/* =========================
+   底部版权区
+========================= */
+.footer-bottom {
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    text-align: center;
+    padding: 20px;
+    font-size: 13px;
+    color: #777;
+}
+
+/* =========================
+   移动端适配
+========================= */
+@media (max-width: 992px) {
+    .footer-inner {
+        padding: 60px 40px;
+        gap: 50px;
+    }
+    
+    .footer-links {
+        gap: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        margin-top: 60px;
+    }
+    
+    .footer-inner {
+        flex-direction: column;
+        gap: 40px;
+        padding: 50px 30px;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .footer-brand {
+        text-align: center;
+    }
+    
+    .footer-brand p {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    
+    .footer-col {
+        text-align: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-inner {
+        padding: 40px 20px;
+    }
+    
+    .footer-bottom {
+        font-size: 11px;
+        padding: 15px;
+    }
+}

@@ -1,0 +1,432 @@
+/* ===== INTRO ===== */
+.intro {
+    text-align: center;
+    padding: 50px 20px 30px;
+    max-width: 800px;
+    margin: 0 auto 5px;
+}
+
+.intro h1 {
+    font-weight: 400;
+    font-size: 28px;
+    margin-bottom: 16px;
+}
+
+.intro p {
+    font-size: 14px;
+    line-height: 1.6;
+    opacity: 0.8;
+}
+
+/* ===== 三栏布局：2:1:1 ===== */
+.grid-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 28px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 10px 40px 30px;
+    align-items: stretch;
+}
+
+/* ===== 左侧大卡片 (占2份) ===== */
+.card-large {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    height: 100%;
+}
+
+.card-large img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    border-radius: 0;
+    display: block;
+    background: #e8e3db;
+    flex-shrink: 0;
+}
+
+.card-large .content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.card-large .content h2 {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.3;
+    margin-bottom: 4px;
+    color: #1a1714;
+}
+
+.card-large .content p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #4a4540;
+    opacity: 0.85;
+    margin: 0;
+}
+
+.card-large .content a {
+    font-size: 14px;
+    color: #1a1714;
+    text-decoration: none;
+    border-bottom: 1px solid #d0c8be;
+    padding-bottom: 2px;
+    transition: border-color 0.2s;
+    align-self: flex-start;
+    margin-top: 4px;
+}
+
+.card-large .content a:hover {
+    border-bottom-color: #000;
+}
+
+/* ===== 右侧两栏 ===== */
+.cards-column {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    height: 100%;
+}
+
+/* ===== 右侧小卡片 ===== */
+.card-small {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
+    min-height: 0;
+}
+
+.card-small img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    border-radius: 0;
+    display: block;
+    background: #e8e3db;
+    flex-shrink: 0;
+}
+
+.card-small .content-small {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.card-small .content-small h3 {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.3;
+    margin-bottom: 2px;
+    color: #1a1714;
+}
+
+.card-small .content-small p {
+    font-size: 12px;
+    line-height: 1.5;
+    color: #4a4540;
+    opacity: 0.8;
+    margin: 0;
+}
+
+.card-small .content-small a {
+    font-size: 12px;
+    color: #1a1714;
+    text-decoration: none;
+    border-bottom: 1px solid #d0c8be;
+    padding-bottom: 1px;
+    transition: border-color 0.2s;
+    align-self: flex-start;
+    margin-top: 3px;
+}
+
+.card-small .content-small a:hover {
+    border-bottom-color: #000;
+}
+
+/* ============================================================ */
+/* 核心：通过 flex 比例控制图片高度，比例改为 6:4              */
+/* ============================================================ */
+
+/* 
+ * 高图 : 矮图 = 6 : 4 (60% : 40%)
+ * 中间栏：上图高(60%)，下图矮(40%)
+ * 右侧栏：上图矮(40%)，下图高(60%)
+ */
+
+/* 中间栏 (第一个 .cards-column)：上图高(60%)，下图矮(40%) */
+.cards-column:first-of-type .card-tall {
+    flex: 6;
+}
+
+.cards-column:first-of-type .card-tall img {
+    height: 0;
+    min-height: 0;
+    flex: 1;
+    aspect-ratio: 3 / 4;
+}
+
+.cards-column:first-of-type .card-short {
+    flex: 4;
+}
+
+.cards-column:first-of-type .card-short img {
+    height: 0;
+    min-height: 0;
+    flex: 1;
+    aspect-ratio: 3 / 4;
+}
+
+/* 右侧栏 (第二个 .cards-column)：上图矮(40%)，下图高(60%) */
+.cards-column:last-of-type .card-short {
+    flex: 4;
+}
+
+.cards-column:last-of-type .card-short img {
+    height: 0;
+    min-height: 0;
+    flex: 1;
+    aspect-ratio: 3 / 4;
+}
+
+.cards-column:last-of-type .card-tall {
+    flex: 6;
+}
+
+.cards-column:last-of-type .card-tall img {
+    height: 0;
+    min-height: 0;
+    flex: 1;
+    aspect-ratio: 3 / 4;
+}
+/* ===== 修复 footer ===== */
+#footer-container {
+    position: relative;
+    clear: both;
+    margin-top: 10px;
+    width: 100%;
+    display: block;
+}
+
+.scroll-top{
+    position:fixed;
+    right:40px;
+    bottom:40px;
+    z-index:1000;
+}
+
+.floating-logo{
+    position:fixed;
+    right:40px;
+    bottom:150px;
+    z-index:1000;
+}
+/* 
+ * 6:4 比例让高图占 60%，矮图占 40%
+ * 两栏的 6+4 = 10 份，分配方式相反
+ * 总高度与左侧完全匹配
+ */
+
+/* ============================================================ */
+
+/* ===========================================================
+   Responsive
+=========================================================== */
+
+/* ---------- 1400px ---------- */
+@media (max-width:1400px){
+
+    .grid-layout{
+        max-width:1100px;
+        gap:24px;
+        padding:20px 30px;
+    }
+
+}
+
+
+/* ---------- 1200px ---------- */
+@media (max-width:1200px){
+
+    .grid-layout{
+        grid-template-columns:1.7fr 1fr 1fr;
+        gap:22px;
+        padding:20px 24px;
+    }
+
+}
+
+
+/* ---------- iPad ---------- */
+@media (max-width:992px){
+
+    .intro{
+        padding:40px 20px 25px;
+    }
+
+    .intro h1{
+        font-size:26px;
+    }
+
+    .grid-layout{
+
+        grid-template-columns:1fr 1fr;
+
+        gap:22px;
+
+        padding:20px;
+    }
+
+    .card-large{
+        grid-column:1 / -1;
+    }
+
+    .cards-column{
+        gap:18px;
+    }
+
+}
+
+
+/* ---------- Mobile ---------- */
+@media (max-width:768px){
+
+    .intro{
+    
+        padding:30px 20px;
+    
+    }
+    
+    .intro h1{
+    
+        font-size:24px;
+    
+    }
+    
+    .grid-layout{
+    
+        grid-template-columns:1fr;
+    
+        gap:30px;
+    
+        padding:20px;
+    
+        align-items:start;
+    
+    }
+    
+    .card-large{
+    
+        grid-column:auto;
+    
+    }
+    
+    .cards-column{
+    
+        display:block;
+    
+    }
+    
+    .card-small{
+    
+        flex:none;
+    
+        height:auto;
+    
+        margin-bottom:28px;
+    
+    }
+    
+    .card-small:last-child{
+    
+        margin-bottom:0;
+    
+    }
+    
+    .card-large img,
+    .card-small img{
+    
+        width:100%;
+    
+        height:auto;
+    
+        aspect-ratio:3/4;
+    
+    }
+    
+    .cards-column .card-tall,
+    .cards-column .card-short{
+    
+        flex:none;
+    
+    }
+    
+    .cards-column .card-tall img,
+    .cards-column .card-short img{
+    
+        height:auto;
+    
+        flex:none;
+    
+    }
+    
+    }
+
+/* ---------- Small Mobile ---------- */
+@media (max-width:576px){
+
+    .intro{
+
+        padding:24px 16px;
+
+    }
+
+    .intro h1{
+
+        font-size:22px;
+
+    }
+
+    .intro p{
+
+        font-size:13px;
+
+    }
+
+    .grid-layout{
+
+        padding:16px;
+
+        gap:22px;
+
+    }
+
+    .card-large .content h2{
+
+        font-size:18px;
+
+    }
+
+    .card-large .content p{
+
+        font-size:13px;
+
+    }
+
+    .card-small .content-small h3{
+
+        font-size:14px;
+
+    }
+
+    .card-small .content-small p{
+
+        font-size:12px;
+
+    }
+
+}

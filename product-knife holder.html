@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Seepure | product | Knife holder</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="components/header.css">
+    <link rel="stylesheet" href="components/footer.css">
+    <link rel="stylesheet" href="product.css">
+</head>
+<body>
+
+    <div id="header-container"></div>
+
+    <div class="product-page">
+        
+        <!-- ========================================== -->
+        <!-- 模块1：产品展示区（左右两栏）                 -->
+        <!-- ========================================== -->
+        <div class="product-container">
+            
+            <div class="product-images">
+                <div class="main-image">
+                    <img src="https://cdn.jsdelivr.net/gh/yytdesign/webtu/yytu/collection-knife%20holder.jpeg" alt="45 Chair" id="mainImage">
+                </div>
+                <div class="image-counter" id="imageCounter">1 / 4</div>
+                <div class="image-nav">
+                    <button class="nav-btn prev" id="prevBtn">←</button>
+                    <button class="nav-btn next" id="nextBtn">→</button>
+                </div>
+            </div>
+            <!-- 隐藏的图片数据（用来存储多张图片） -->
+            <div style="display: none;" id="imageData" 
+               data-images='[
+                     "https://cdn.jsdelivr.net/gh/yytdesign/webtu/yytu/collection-knife%20holder.jpeg",
+                     "https://cdn.jsdelivr.net/gh/yytdesign/webtu/yytu/main.jpg",
+                     "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=800",
+                     "https://cdn.jsdelivr.net/gh/yytdesign/webtu/yytu/main.jpg"
+                    ]'>
+            </div>
+            
+            <div class="product-info">
+                <h1>THE 45 CHAIR <span class="subtitle">| FINN JUHL | 1945</span></h1>
+                
+                <p class="description">
+                    In the fall of 1945, Finn Juhl unveiled the 45 Chair at the Copenhagen Cabinetmakers' Guild Exhibition. 
+                    With this chair, he introduced a groundbreaking design separating the carried from the carrying elements 
+                    – something previously unseen. Today, the chair is widely regarded as one of the most revolutionary and 
+                    iconic pieces in Danish furniture design. The chair is upholstered by hand in Denmark in textile or leather. 
+                    The frame is available in oak or walnut.
+                </p>
+                
+                <div class="spec-row">
+                    <div class="spec-label">Wood Type</div>
+                    <div class="spec-value">Walnut <span class="spec-action">+</span></div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-label">Upholstery</div>
+                    <div class="spec-value">Vidar <span class="spec-number">222</span> <span class="spec-action">+</span></div>
+                </div>
+                
+                <p class="note">
+                    Please note that the versions shown here represent only a selection of the many available options. 
+                    For a complete overview of colors and materials, please explore the material page.
+                </p>
+                
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header">Product details <span class="accordion-icon">+</span></div>
+                        <div class="accordion-content">
+                            <p>Designer: Finn Juhl</p>
+                            <p>Year: 1945, relaunched in 2003</p>
+                            <p>Materials: Frame: Oak or walnut / Upholstery: Textile or leather</p>
+                            <p>Dimensions: W 66.5 cm | D 73 cm | H 85 cm | Seat height: 44 cm</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">Download files <span class="accordion-icon">+</span></div>
+                        <div class="accordion-content">
+                            <p>2D Drawing (PDF) - <a href="#">Download</a></p>
+                            <p>3D Model (ZIP) - <a href="#">Download</a></p>
+                            <p>Product Sheet (PDF) - <a href="#">Download</a></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="image-numbers" id="imageNumbers">
+                    <span class="num active" data-index="0">01</span>
+                    <span class="num" data-index="1">02</span>
+                    <span class="num" data-index="2">03</span>
+                    <span class="num" data-index="3">04</span>
+                </div>
+                
+                <div class="retailer-link">
+                    <a href="#">Find a retailer →</a>
+                </div>
+            </div>
+            
+        </div>
+    
+        <!-- ========================================== -->
+        <!-- 模块2：设计革命区（左右两栏 + 一张大图）       -->
+        <!-- ========================================== -->
+        <div class="design-revolution">
+            
+            <h2 class="section-main-title">THE BEGINNING OF A DESIGN REVOLUTION</h2>
+            
+            <div class="revolution-grid">
+                
+                <div class="revolution-left">
+                    <h3 class="section-subtitle">A Defining Silhouette</h3>
+                    <div class="revolution-text">
+                        <p>
+                            On the 45 Chair, the space between the frame and the seat creates a sense of lightness which, 
+                            combined with its organic shape and refined detailing, gives the chair a unique beauty and 
+                            floating elegance. The chair appeals to all the senses, pleasing both eye and body, and it 
+                            has even been called <strong>“the mother of all modern chairs”</strong> by Japanese professor 
+                            and design collector Mr. Noritsugu Oda.
+                        </p>
+                        <p>
+                            The groundbreaking 45 Chair marked the beginning of Finn Juhl's distinctive design language, 
+                            which came to full expression in the late 1940s. During this period, his work was defined by 
+                            the liberation of the seat and backrest – designed as a single unit, carried independently by 
+                            the frame. This bold approach became a defining moment in establishing Finn Juhl as a true 
+                            pioneer in furniture design.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="revolution-right">
+                    <div class="revolution-image-large">
+                        <img src="https://images.unsplash.com/photo-1581539250439-c96689b516dd?w=1000" alt="Finn Juhl's own 45 Chairs">
+                        <div class="image-caption">
+                            Finn Juhl's own 45 Chairs in his house north of Copenhagen.
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+    
+        <!-- ========================================== -->
+        <!-- 模块3：From Experiment to Icon  大小图            -->
+        <!-- ========================================== -->
+        <div class="experiment-section">
+            
+            <h2 class="section-main-title">FROM EXPERIMENT TO ICON</h2>
+            <h3 class="section-subtitle">Immediate Acclaim</h3>
+            
+            <div class="experiment-text">
+                <p>
+                    While Finn Juhl had already begun exploring the idea of separating the upholstered and wooden elements 
+                    in earlier works, the 45 Chair marked a turning point. Its sculptural backrest and fluid, organic form 
+                    elevated the concept to new heights, firmly establishing Finn Juhl as a leading figure in 20th-century design.
+                </p>
+                
+                <div class="quote">
+                    <p>
+                        "In the early years, Finn Juhl's attempts seemed exaggerated, but now it is much more interesting 
+                        to observe the result he has achieved by going his own ways. Most beautiful is an armchair, where 
+                        the frame is organically shaped as a bone, able to support the muscles of an arm and the weight 
+                        of a body. The expression of the chair is reminiscent of a weapon, sharpened by human hands."
+                    </p>
+                    <p class="quote-author">— Architect Erik Herløw, 1945</p>
+                </div>
+            </div>
+            
+            <div class="experiment-images">
+                <div class="experiment-image-large">
+                    <img src="https://images.unsplash.com/photo-1581539250439-c96689b516dd?w=800" alt="45 Chair in walnut">
+                </div>
+                <div class="experiment-image-small">
+                    <img src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=500" alt="45 Chair detail">
+                </div>
+            </div>
+            
+            <div class="image-caption">
+                The 45 Chair in walnut with 'Nalia' upholstery in the colour '0430'. 
+                <span class="image-credits">Photo: Elisabeth Heltoft for Sahco</span>
+            </div>
+            
+        </div>
+    
+        <!-- ========================================== -->
+        <!-- 模块4：工艺与制作过程                        -->
+        <!-- ========================================== -->
+        <div class="process-section">
+            
+            <h2 class="section-main-title">THE PROCESS BEHIND THE COLLECTION</h2>
+            <h3 class="section-subtitle">Production and Craftsmanship</h3>
+            
+            <div class="process-text">
+                <p>
+                    We want to continue to shed light upon the great amount of work that goes into producing each and every 
+                    piece of Finn Juhl's sculptural furniture. It is crucial that the details must be as fine and pure as 
+                    if it came from the old cabinetmakers' workshop, but our understanding of quality also includes durability. 
+                    The furniture has to be so durable that the pieces can be enjoyed by people today and by generations to come. 
+                    With respect for the tradition and the demand for longevity, we put only the best materials in the hands 
+                    of the most dedicated and skilled craftspeople.
+                </p>
+            </div>
+            
+            <div class="discover-link">
+                <a href="#">Discover →</a>
+            </div>
+            
+        </div>
+    
+        <!-- ========================================== -->
+        <!-- 模块5：左边图片 + 右边文字                   -->
+        <!-- ========================================== -->
+        <div class="split-block image-left">
+            <div class="split-image">
+                <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800" alt="Craftsmanship detail">
+            </div>
+            <div class="split-text">
+                <h3 class="split-title">Craftsmanship & Quality</h3>
+                <p class="split-description">
+                    Each piece is meticulously handcrafted by skilled artisans, ensuring every detail meets the highest standards. 
+                    The combination of traditional techniques and modern innovation results in furniture that is both beautiful and enduring.
+                </p>
+                <a href="#" class="split-link">Learn more →</a>
+            </div>
+        </div>
+    
+        <!-- ========================================== -->
+        <!-- 模块6：左边文字 + 右边图片                   -->
+        <!-- ========================================== -->
+        <div class="split-block image-right">
+            <div class="split-text">
+                <h3 class="split-title">Sustainable Materials</h3>
+                <p class="split-description">
+                    We are committed to using only the finest sustainable materials. From responsibly sourced wood to eco-friendly 
+                    upholstery, every component is chosen with care for both quality and environmental impact.
+                </p>
+                <a href="#" class="split-link">Discover our materials →</a>
+            </div>
+            <div class="split-image">
+                <img src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=800" alt="Sustainable materials">
+            </div>
+        </div>
+    
+        <!-- ========================================== -->
+        <!-- 模块7：全球合作伙伴 + 零售商                 -->
+        <!-- ========================================== -->
+        <div class="partners-section">
+            
+            <h2 class="section-main-title">OUR PARTNERS AROUND THE WORLD</h2>
+            
+            <div class="partners-header">
+                <h3 class="partners-title">Find a Retailer</h3>
+                <p class="partners-description">
+                    Locate a retailer near you. Our trusted partners offer a large range of our furniture and will guide you 
+                    in terms of choosing the right material and finding the perfect piece to fit your need.
+                </p>
+                <div class="partners-link">
+                    <a href="#">Discover →</a>
+                </div>
+            </div>
+            
+            <div class="partners-image">
+                <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1000" alt="45 Chair in walnut with Elegance leather">
+                <div class="image-caption">
+                    The 45 Chair in walnut with 'Elegance' leather in the color 'Black'. 
+                    <span class="image-credits">Photo credit: The Monocot Shop / JUST BUILD LTD / Studio Periphery</span>
+                </div>
+            </div>
+            
+        </div>
+    
+    </div>
+
+ 
+
+    <div class="scroll-top"></div>
+    <a href="index.html" class="floating-logo">SP</a>
+    <!-- JS -->
+ 
+    
+    <!-- footer 会加载到这里 -->
+    <div id="footer-container"></div>
+
+    <script src="script.js"></script>
+    
+    
+
+</body>
+</html>
+

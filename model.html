@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>3D模型展示 - KeyShot导出</title>
+    <link rel="stylesheet" href="model.css">
+    <style>
+        /* 确保Three.js画布能正确填充 */
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div id="loading">加载模型中... 📦</div>
+    <div id="info">🖱️ 鼠标拖动旋转 | 右键平移 | 滚动缩放 | 📱 手指可旋转/缩放</div>
+    <div class="controls-hint">✨ KeyShot 导出模型 | Three.js 展示</div>
+
+    <!-- 引入Three.js和自定义脚本 -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.128.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.128.0/examples/jsm/"
+            }
+        }
+    </script>
+    <script type="module" src="model.js"></script>
+</body>
+</html>

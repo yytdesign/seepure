@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seepure | Home</title>
+    
+    <!-- 主样式 -->
+    <link rel="stylesheet" href="style.css">
+    
+    
+    <!-- 组件样式 - 按照你的路径 components/ -->
+    <link rel="stylesheet" href="components/header.css">
+    <link rel="stylesheet" href="components/footer.css">
+    <link rel="stylesheet" href="design.css">
+   
+    
+    <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+    <!-- header 会加载到这里 -->
+    <div id="header-container"></div>
+
+    <!-- HERO 视频-->
+    <section class="panel hero">
+        <video autoplay muted loop playsinline>
+            <source src="https://cdn.jsdelivr.net/gh/yytdesign/webtu/yytu/marble%20plate-index.MOV">
+        </video>
+        <div class="hero-text">
+            <h1>Seepure Design</h1>
+        </div>
+    </section>
+
+    <!-- 过渡 -->
+    <div class="section-transition"></div>
+
+    <!-- 内容模块 -->
+    <section class="split-section">
+        <div class="container">
+            <div class="split-image">
+                <img src="https://images.unsplash.com/photo-1615873968403-89e068629265?q=80&w=1200">
+            </div>
+            <div class="split-content">
+                <h2>Craft & Material</h2>
+                <p>Minimalism and quiet luxury.</p>
+            </div>
+        </div>
+    </section>
+
+     <!-- ========================================== -->
+        <!-- 模块6：右边文字 + 左边图片   加image-right                -->
+        <!-- ========================================== -->
+        <div class="split-block image-right">
+            <div class="split-text">
+                <h3 class="split-title">Sustainable Materials</h3>
+                <p class="split-description">
+                    We are committed to using only the finest sustainable materials. From responsibly sourced wood to eco-friendly 
+                    upholstery, every component is chosen with care for both quality and environmental impact.
+                </p>
+                <a href="#" class="split-link">Discover our materials →</a>
+            </div>
+            <div class="split-image">
+                <img src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=800" alt="Sustainable materials">
+            </div>
+        </div>
+    <!-- ========================================== -->
+        <!-- 模块6：左边文字 + 右边图片                   -->
+        <!-- ========================================== -->
+        <div class="split-block">
+            <div class="split-text">
+                <h3 class="split-title">Sustainable Materials</h3>
+                <p class="split-description">
+                    We are committed to using only the finest sustainable materials. From responsibly sourced wood to eco-friendly 
+                    upholstery, every component is chosen with care for both quality and environmental impact.
+                </p>
+                <a href="#" class="split-link">Discover our materials →</a>
+            </div>
+            <div class="split-image">
+                <img src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=800" alt="Sustainable materials">
+            </div>
+
+        </div>
+    
+    
+    <div class="scroll-top"></div>
+    <a href="index.html" class="floating-logo">SP</a>
+
+    <!-- footer 会加载到这里 -->
+    <div id="footer-container"></div>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+
+</body>
+</html>

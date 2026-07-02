@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Seepure | materials</title>
+        
+        <!-- 主样式 -->
+        <link rel="stylesheet" href="style.css">
+        
+        
+        <!-- 组件样式 - 按照你的路径 components/ -->
+        <link rel="stylesheet" href="components/header.css">
+        <link rel="stylesheet" href="components/footer.css">
+        <link rel="stylesheet" href="design.css">
+        <link rel="stylesheet" href="materials.css">
+        
+        <!-- GSAP -->
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    </head>
+    <body>
+     
+        <!-- header 会加载到这里 -->
+        <div id="header-container"></div>
+        
+        <!-- 顶部大图 -->
+        <div class="page-wrapper">
+            <!-- 顶部大图 + 中央文字 (完全按照提供的文案和优质视觉) -->
+            <section class="hero-material">
+                <!-- 横跨大图: 体现木质/金属纹理的高品质图片 (Finn Juhl 风格) -->
+                <img class="hero-bg-img" 
+                    src="https://images.pexels.com/photos/7211702/pexels-photo-7211702.jpeg?auto=compress&cs=tinysrgb&w=1600" 
+                    alt="优质木材与金属细节" 
+                    loading="eager">
+                <div class="hero-center">
+                    <h1>Materials</h1>
+                    <div class="hero-description">
+                        <p>Materials of the highest quality are the basis for creating elegant, comfortable and durable pieces of furniture that will last for generations. Consequently, the precise selection of the finest materials is a predominant focus point for House of Finn Juhl.</p>
+                        <p style="margin-top: 1rem;">When it comes to Finn Juhl, compromising is not an option. House of Finn Juhl manufactures the furniture with the same values and in the same quality as it was originally intended. Without this approach it would not be possible to achieve the unique finish and delicate details that is Finn Juhl’s trademark.</p>
+                    </div>
+                    <div class="hero-note">
+                        Please note that the images shown are for guidance only. The furniture delivered may vary in colour and texture compared to the images. We kindly encourage you to view the physical material samples at our official retailers.
+                    </div>
+                </div>
+                
+            </section>
+        
+            <!-- 正文区域：下方材质链接 + 附加描述（完全突出可点击链接） -->
+            <div class="materials-content">
+                <!-- 引入品牌强调文案（可选，与页面气质融合） -->
+                <div class="statement">
+                    <p>Since 1940s, Finn Juhl’s legacy has been defined by an uncompromising approach to form and material. Every piece tells a story of craftsmanship — where wood grain, leather patina and metal structure coexist in silent harmony.</p>
+                    <p class="light-meta">Explore the raw elements that shape timeless design.</p>
+                </div>
+        
+                <!-- 关键材质链接区域：完全按照提供图片内容 WOOD | LEATHER | TEXTILES | LINOLEUM | SHEEPSKIN | STEEL | METALS 
+                    并且每个都是可点击的链接（href="#" 可替换为实际链接） -->
+                <div class="materials-links">
+                    <ul class="category-list">
+                        <li><a href="#">WOOD</a></li>
+                        <li><a href="#">LEATHER</a></li>
+                        <li><a href="#">TEXTILES</a></li>
+                        <li><a href="#">LINOLEUM</a></li>
+                        <li><a href="#">SHEEPSKIN</a></li>
+                        <li><a href="#">STEEL</a></li>
+                        <li><a href="#">METALS</a></li>
+                    </ul>
+                </div>
+                 <!-- 附加说明区域 / 材质哲学 (柔和补充) -->
+                 <div class="material-note">
+                    <p>** 材质之魂 **</p>
+                    <p>每一块木材皆承载森林的记忆，每一寸皮革都随着岁月呈现独有的光泽。House of Finn Juhl 坚信，唯有最上乘的原材料才能赋予家具生命与传承。我们邀请您前往官方展厅，亲手触摸这些纹理与温度。</p>
+                    <p style="margin-top: 10px;">—— 永恒设计，始于材料的选择 ——</p>
+                </div>
+        <section>
+            <div class="material-detail">
+                <img class="material-img"
+                src="#" 
+                alt="material detail">
+            </div>
+            <div class="material-img-note">
+                 <h1>Materials</h1>
+                 <div class="hero-description">
+                    <p>Materials of the highest quality are the basis for creating elegant</p>
+                 </div>
+            </div>
+        </section>
+               
+            </div>
+        </div>
+
+
+
+
+
+     
+
+        <div class="scroll-top"></div>
+        <a href="index.html" class="floating-logo">SP</a>
+
+        <!-- footer 会加载到这里 -->
+        <div id="footer-container"></div>
+
+        <!-- JS -->
+        <script src="script.js"></script>
+
+    </body>
+</html>

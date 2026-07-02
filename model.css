@@ -1,0 +1,61 @@
+/* 全局样式 */
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* 底部提示条 */
+#info {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    pointer-events: none;
+    z-index: 10;
+    width: fit-content;
+    margin: 0 auto;
+    backdrop-filter: blur(5px);
+}
+
+/* 加载提示 */
+#loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-size: 16px;
+    z-index: 20;
+    font-family: monospace;
+}
+
+/* 控制提示（桌面端显示） */
+.controls-hint {
+    position: absolute;
+    bottom: 80px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    pointer-events: none;
+    z-index: 10;
+}
+
+/* 移动端隐藏右侧提示 */
+@media (max-width: 768px) {
+    .controls-hint {
+        display: none;
+    }
+}

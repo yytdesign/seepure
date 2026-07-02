@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Finn Juhl · 工艺叙事 | 滚动布局</title>
+    <!-- 独立CSS文件：styles.css 需与当前HTML在同一目录下 -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="components/header.css">
+    <link rel="stylesheet" href="components/footer.css">
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+     <!-- header 会加载到这里 -->
+     <div id="header-container"></div>
+
+    <!-- 第一屏：全屏背景图 + 文字居中 -->
+    <section class="screen screen-1">
+        <div class="hero-text">
+            <h1>Production & Craftsmanship</h1>
+            <p>The crafting of each of Finn Juhl's iconic designs is a testament to extensive craftsmanship and dedication.<br>
+            With respect for tradition and uncompromising demands for quality.</p>
+        </div>
+        <div class="scroll-hint">▼ 滚动探索</div>
+    </section>
+
+    <!-- 第二屏：左大图 + 右小图 -->
+    <section class="screen screen-2">
+        <div class="container">
+            <div class="two-col-large-left">
+                <div class="img-large">
+                    <img src="https://placehold.co/900x600/D4C5B1/8B6F50?text=Joinery+Vejen+Denmark" alt="Vejen joinery main workshop">
+                    <div class="caption">Details from the joinery in Vejen, Denmark.</div>
+                </div>
+                <div class="img-small">
+                    <img src="https://placehold.co/600x450/E2D5C5/AF8A60?text=Craftsmanship+detail" alt="Woodworking detail">
+                    <div class="caption">Hand-carved joinery precision</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 第三屏：居中文字 -->
+    <section class="screen screen-3">
+        <div class="container">
+            <div class="centered-quote">
+                <h2>Local Production · Danish Legacy</h2>
+                <p>Our own production facilities include a joinery and upholstery workshop in Ringkøbing, on the West Coast of Denmark, where we primarily manufacture Finn Juhl's upholstered furniture, tables, and storage systems, as well as an upholstery workshop and a joinery in Vejen, specializing in the production of solid wood furniture. At both locations, our capable and experienced craftspeople are committed to upholding the rich tradition of fine woodworking upholstery fitting.</p>
+                <div class="divider"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 第四屏：左小图 + 右大图 -->
+    <section class="screen screen-4">
+        <div class="container">
+            <div class="two-col-small-left">
+                <div class="img-small">
+                    <img src="https://placehold.co/600x450/D9CBB8/B2825A?text=Ringkøbing+workshop" alt="Ringkøbing upholstery">
+                    <div class="caption">Details from the joinery in Ringkøbing, Denmark.</div>
+                </div>
+                <div class="img-large">
+                    <img src="https://placehold.co/900x600/D4BD9F/9B7652?text=Hand-sewn+Poet+Sofa" alt="Poet Sofa hand sewing">
+                    <div class="caption">Entirely hand-sewn — the Poet Sofa and Pelican Chair</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 第五屏：居中文字（Finn Juhl 引言） -->
+    <section class="screen screen-5">
+        <div class="container">
+            <div class="finn-juhl-quote">
+                <h2>Furniture Artistry and Craftsmanship</h2>
+                <p>The upholstered furniture, such as the Poet Sofa and the Pelican Chair, are entirely hand-sewn in the same Danish tradition as the old ones. Upholstery by hand is both a craft and an art form, taking years of experience, great knowledge, and, above all, undying patience to master. Working with organically shaped furniture like Finn Juhl's is a significant challenge.</p>
+                <blockquote>
+                    “One should not despair over the fact that some of the developments one has hoped for were never produced but only became a beginning. Perhaps they will be revived some day in the future if necessary or reasonable, when the time is ripe.”
+                </blockquote>
+                <p class="attribution">— Finn Juhl</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 第六屏：文字居中于上方，下方视频接近全屏宽度（占满容器几乎全宽） -->
+    <section class="screen screen-6">
+        <div class="container-full">
+            <!-- 文字部分：居中展示 -->
+            <div class="video-page-text">
+                <h3>Japanese Joinery Partnership & Modern Craft</h3>
+                <p>Today, while modern technology supports us, it is only through the combination of meticulous and skilled craftsmanship that we can achieve the distinctive signature details of Finn Juhl's furniture. The most intricate wooden frames require highly specialized woodworking skills, and some of the finest artisans for this work are found in Japan.</p>
+                <p>That's why, from the very beginning, we've partnered with a small workshop in Yamagata, Japan. Denmark and Japan share a deep cultural connection – both countries are known for their rich traditions of craftsmanship and a design philosophy centered on simplicity, functionality, and respect for materials.</p>
+                <p><strong>This shared heritage makes the collaboration a natural extension of our production process.</strong></p>
+            </div>
+            <!-- 视频区域：接近全屏宽度，宽幅沉浸式展示 -->
+            <div class="full-width-video">
+                <video controls poster="https://placehold.co/1920x1080/5D5144/F0E5D8?text=Upholstery+Workshop+Mastercraft">
+                    <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4">
+                    您的浏览器不支持 video 标签，请升级后观看工坊制作过程。
+                </video>
+            </div>
+            <div class="video-caption-wide">The video shows different processes from the upholstery workshop — hand-stitching, wood joinery, and final assembly.</div>
+        </div>
+    </section>
+
+       <div class="scroll-top"></div>
+       <a href="index.html" class="floating-logo">SP</a>
+
+       <!-- footer 会加载到这里 -->
+       <div id="footer-container"></div>
+
+       <!-- JS -->
+       <script src="script.js"></script>
+</body>
+</html>

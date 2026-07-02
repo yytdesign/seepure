@@ -1,0 +1,643 @@
+/* ============================================
+   Finn Juhl 叙事滚动布局 - 独立样式表
+   七屏滚动结构：全屏图像、左右图组合、居中引文、视频区
+   第六屏：文字居中于上方，视频全宽沉浸
+   所有图片圆角均已设置为 0
+   ============================================ */
+
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    background-color: #faf8f4;
+    color: #1e2a2a;
+    line-height: 1.5;
+}
+
+/* 每一屏占满视口高度 */
+.screen {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 容器约束内容宽度（常规屏使用） */
+.container {
+    max-width: 1400px;
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+/* 第六屏专用全宽容器 */
+.container-full {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+/* ========== 第一屏：全屏背景图 + 文字居中 ========== */
+.screen-1 {
+    background-image: url('https://placehold.co/1920x1080/D4C5B1/8B6F50?text=Finn+Juhl+Joinery');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.screen-1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 1;
+}
+
+.hero-text {
+    text-align: center;
+    color: #ffffff;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    opacity: 0.95;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.scroll-hint {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    z-index: 2;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(10px); }
+}
+
+/* ========== 第二屏：左大图 + 右小图 ========== */
+.screen-2 {
+    background: #faf8f4;
+}
+
+.two-col-large-left {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.img-large {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 0;
+}
+
+.img-large img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+.img-small {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 0;
+}
+
+.img-small img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0;
+}
+
+.caption {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: #8b7355;
+    text-align: center;
+    letter-spacing: 0.3px;
+}
+
+/* ========== 第三屏：居中文字 ========== */
+.screen-3 {
+    background: #f0ebe2;
+    text-align: center;
+}
+
+.centered-quote {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.centered-quote h2 {
+    font-size: 2.2rem;
+    font-weight: 450;
+    color: #3a5a3c;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.3px;
+}
+
+.centered-quote p {
+    font-size: 1.1rem;
+    color: #4a5b55;
+    line-height: 1.7;
+}
+
+.divider {
+    width: 70px;
+    height: 2px;
+    background: #cbb48a;
+    margin: 2rem auto 0;
+}
+
+/* ========== 第四屏：左小图 + 右大图 ========== */
+.screen-4 {
+    background: #ffffff;
+}
+
+.two-col-small-left {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+/* ========== 第五屏：居中文字（带引用） ========== */
+.screen-5 {
+    background: #e8e0d5;
+    text-align: center;
+}
+
+.finn-juhl-quote {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.finn-juhl-quote h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #3a5a3c;
+    margin-bottom: 1.2rem;
+}
+
+.finn-juhl-quote p {
+    font-size: 1rem;
+    color: #4a5b55;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.finn-juhl-quote blockquote {
+    font-size: 1.5rem;
+    font-style: italic;
+    color: #4a3b2c;
+    line-height: 1.45;
+    font-weight: 450;
+    border-left: 4px solid #cbb48a;
+    padding-left: 2rem;
+    margin: 1.5rem 0;
+    text-align: left;
+}
+
+.finn-juhl-quote .attribution {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #9b7a5a;
+    letter-spacing: 1px;
+}
+
+/* ========== 第六屏：文字居中上方 + 全宽视频（圆角为0） ========== */
+.screen-6 {
+    background: #faf8f4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 0;
+}
+
+/* 文字区域：居中显示 */
+.video-page-text {
+    text-align: center;
+    max-width: 850px;
+    margin: 0 auto 2rem auto;
+    width: 100%;
+}
+
+.video-page-text h3 {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #2c5a2e;
+    margin-bottom: 1rem;
+    letter-spacing: -0.3px;
+}
+
+.video-page-text p {
+    font-size: 1.05rem;
+    color: #3c5a52;
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+}
+
+.video-page-text strong {
+    color: #8b6f50;
+    font-weight: 600;
+}
+
+/* 全宽视频容器 — 接近全屏宽度，无圆角 */
+.full-width-video {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    overflow: hidden;
+    background: #1e1b17;
+    border-radius: 0;
+}
+
+.full-width-video video {
+    width: 100%;
+    display: block;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+.video-caption-wide {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #aa8b6e;
+    margin-top: 1rem;
+    letter-spacing: 0.5px;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* 占位图通用样式 — 保持图片区域整洁 */
+img {
+    display: block;
+}
+
+.media img,
+.card img {
+    background: #e2d8cd;
+}
+/* ========== 响应式适配 ========== */
+/* ==========================================
+1400px
+========================================== */
+
+@media (max-width:1400px){
+
+    .container{
+    
+        width:92%;
+    
+    }
+    
+    .hero-text{
+    
+        max-width:700px;
+    
+    }
+    
+    .hero-text h1{
+    
+        font-size:3rem;
+    
+    }
+    
+    .centered-quote,
+    .finn-juhl-quote{
+    
+        max-width:760px;
+    
+    }
+    
+    }
+    /* ==========================================
+1200px
+========================================== */
+
+@media (max-width:1200px){
+
+    .two-col-large-left,
+    .two-col-small-left{
+    
+        gap:40px;
+    
+    }
+    
+    .hero-text h1{
+    
+        font-size:2.8rem;
+    
+    }
+    
+    .video-page-text{
+    
+        max-width:720px;
+    
+    }
+    
+    }
+/* ==========================================
+992px
+========================================== */
+
+@media (max-width:992px){
+
+    .container{
+    
+        width:94%;
+    
+    }
+    
+    .two-col-large-left{
+    
+        grid-template-columns:1.1fr 0.9fr;
+    
+    }
+    
+    .two-col-small-left{
+    
+        grid-template-columns:0.9fr 1.1fr;
+    
+    }
+    
+    .hero-text{
+    
+        max-width:620px;
+    
+    }
+    
+    .hero-text h1{
+    
+        font-size:2.4rem;
+    
+    }
+    
+    .centered-quote h2{
+    
+        font-size:1.9rem;
+    
+    }
+    
+    .finn-juhl-quote blockquote{
+    
+        font-size:1.3rem;
+    
+    }
+    
+    .video-page-text h3{
+    
+        font-size:1.8rem;
+    
+    }
+    
+    }
+    /* ==========================================
+768px
+========================================== */
+
+@media (max-width:768px){
+
+    .screen{
+    
+        min-height:auto;
+    
+        padding:80px 0;
+    
+    }
+    
+    .container{
+    
+        width:92%;
+    
+    }
+    
+    .two-col-large-left,
+    .two-col-small-left{
+    
+        grid-template-columns:1fr;
+    
+        gap:30px;
+    
+    }
+    
+    .img-large,
+    .img-small{
+    
+        order:1;
+    
+    }
+    
+    .caption{
+    
+        margin-top:14px;
+    
+    }
+    
+    .hero-text{
+    
+        padding:20px;
+    
+    }
+    
+    .hero-text h1{
+    
+        font-size:2rem;
+    
+        line-height:1.2;
+    
+    }
+    
+    .hero-text p{
+    
+        font-size:1rem;
+    
+    }
+    
+    .centered-quote{
+    
+        padding:10px;
+    
+    }
+    
+    .centered-quote h2{
+    
+        font-size:1.7rem;
+    
+    }
+    
+    .centered-quote p{
+    
+        font-size:1rem;
+    
+    }
+    
+    .finn-juhl-quote{
+    
+        padding:10px;
+    
+    }
+    
+    .finn-juhl-quote h2{
+    
+        font-size:1.7rem;
+    
+    }
+    
+    .finn-juhl-quote blockquote{
+    
+        font-size:1.15rem;
+    
+        padding-left:18px;
+    
+    }
+    
+    .video-page-text{
+    
+        padding:0 20px;
+    
+    }
+    
+    .video-page-text h3{
+    
+        font-size:1.5rem;
+    
+    }
+    
+    .video-page-text p{
+    
+        font-size:.95rem;
+    
+    }
+    
+    .full-width-video video{
+    
+        aspect-ratio:16/10;
+    
+    }
+    
+    }
+/* ==========================================
+576px
+========================================== */
+
+@media (max-width:576px){
+
+    .hero-text{
+    
+        padding:15px;
+    
+    }
+    
+    .hero-text h1{
+    
+        font-size:1.6rem;
+    
+    }
+    
+    .hero-text p{
+    
+        font-size:.92rem;
+    
+    }
+    
+    .centered-quote h2{
+    
+        font-size:1.45rem;
+    
+    }
+    
+    .centered-quote p{
+    
+        font-size:.92rem;
+    
+    }
+    
+    .finn-juhl-quote h2{
+    
+        font-size:1.45rem;
+    
+    }
+    
+    .finn-juhl-quote p{
+    
+        font-size:.92rem;
+    
+    }
+    
+    .finn-juhl-quote blockquote{
+    
+        font-size:1rem;
+    
+    }
+    
+    .video-page-text{
+    
+        padding:0 16px;
+    
+    }
+    
+    .video-page-text h3{
+    
+        font-size:1.3rem;
+    
+    }
+    
+    .video-page-text p{
+    
+        font-size:.9rem;
+    
+    }
+    
+    .scroll-hint{
+    
+        display:none;
+    
+    }
+    
+    }

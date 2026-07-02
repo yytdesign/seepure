@@ -1,0 +1,174 @@
+/* ===== RESET ===== */
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+/* ===== 全站字体（唯一入口） ===== */
+html, body{
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  color:#111;
+  background:#e4e4e4;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===== Logo serif（品牌感） ===== */
+.logo a{
+  font-family: "Times New Rman", serif;
+  letter-spacing:2px;
+  font-weight:500;
+}
+
+/* ===== 标题 ===== */
+h1,h2,h3{
+  font-weight:500;
+  letter-spacing:0.3px;
+}
+
+/* ===== 正文 ===== */
+p,span,a{
+  font-size:14px;
+  line-height:1.6;
+}
+
+/* ⭐关键修复 */
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+/* ===== 容器 ===== */
+.container{
+  max-width:1400px;
+  margin:0 auto;
+  padding:0 60px;
+}
+
+
+
+
+
+
+
+
+
+/* Logo in Card */
+.card-logo {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: bold;
+  text-decoration: none;
+  color: #111;
+  border: 1px solid #111;
+  padding: 10px;
+  font-size: 0.9em;
+}
+
+/* Back to Top Button */
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #111;
+  color: #fff;
+  border: none;
+  padding: 15px;
+  font-size: 1.5em;
+  cursor: pointer;
+  border-radius: 50%;
+  display: none; /* Initially hidden */
+}
+
+/* Show button on scroll 右下角logo和箭头 */
+.scroll-top{
+  position:fixed;
+  right:50px;
+  bottom:50px;
+  width:1px;
+  height: 100px;
+  background:#111;
+  cursor:pointer;
+  z-index:999;
+}
+
+.scroll-top::after{
+  content:'';
+  position:absolute;
+  top:0;
+  left:-4px;
+  width:10px;
+  height:10px;
+  border-left:1px solid #111;
+  border-top:1px solid #111;
+  transform:rotate(45deg);
+}
+
+.floating-logo{
+  position:fixed;
+  right:40px;
+  bottom:220px;
+  border:1px solid #111;
+  padding:18px 10px;
+  background:white;
+  z-index:999;
+}
+
+
+
+/* ========================================== */
+/* 响应式设计 - 平板 & 手机
+/* ========================================== */
+
+@media (max-width: 900px) {
+  .product-page {
+      padding: 30px 20px;
+  }
+  
+  .product-container,
+  .revolution-grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+  }
+  
+  .experiment-images {
+      grid-template-columns: 1fr;
+  }
+  
+  .split-block {
+      grid-template-columns: 1fr;
+      gap: 30px;
+  }
+  
+  .image-right .split-text {
+      order: 1;
+  }
+  
+  .image-right .split-image {
+      order: 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-subtitle,
+  .revolution-left .section-subtitle,
+  .split-title,
+  .partners-title {
+      font-size: 22px;
+  }
+  
+  .revolution-text,
+  .experiment-text,
+  .process-text,
+  .split-description,
+  .partners-description {
+      font-size: 14px;
+  }
+  
+  .quote {
+      padding: 20px;
+  }
+  
+  .quote p {
+      font-size: 14px;
+  }
+}
