@@ -115,7 +115,7 @@
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:80px;
+  gap:60px;
 }
   
   
@@ -296,57 +296,51 @@
    Responsive
    ========================================================== */
 
-
-
-
-/* ---------- iPad ---------- */
+/* ---------- iPad Pro / 小屏电脑 ---------- */
 @media (max-width:1024px){
 
-  /* Hero */
-
+  /* ================= HERO ================= */
   .hero-text{
-      font-size:40px;
+      font-size:38px;
       text-align:center;
-      padding:0 30px;
+      padding:0 40px;
   }
-
-  /* 第一块左右图文 */
-
+  
+  /* ================= SPLIT SECTION ================= */
   .split-section{
      align-items:center;
      max-width:520px;
      margin:0 auto;
+     
   }
-
+  
   .split-section .container{
-
-    flex-direction:column;
-    gap:60px; /* ↑ 更松 */
-    padding:0 40px;
-    text-align: center;
+      flex-direction:column;
+      gap:60px; /* ↑ 更松 */
+      padding:0 40px;
+      text-align: center;
   }
-
-
-.split-section .split-image{
-    width:100%;
-    max-width:900px;
+  
+  /* 图优先放大 */
+  .split-section .split-image{
+      width:100%;
+      max-width:900px;
       
-    margin-left: 0 !important;
+      margin-left: 0 !important;
   }
-.split-image img{
+  .split-image img{
     width:100%;
     height:auto;
     display:block;
     object-fit:cover;
 }
-.split-section .split-image img{
-
-    aspect-ratio:4/5; /* ⭐ 关键：避免高度死锁 */
-
+  .split-section .split-image img{
+      
+      aspect-ratio:4/5; /* ⭐ 关键：避免高度死锁 */
+      
   }
-
-
-/* 文字变窄 + 更集中 */
+  
+  /* 文字变窄 + 更集中 */
   .split-content{
       max-width:520px;   /* ↓ 变窄 */
       width:100%;
@@ -354,26 +348,28 @@
       font-size:14px;
       line-height:1.75;
   }
-
- /* 标题更克制 */
-.split-content h2{
+  
+  /* 标题更克制 */
+  .split-content h2{
       font-size:28px;
       margin-bottom:20px;
       text-align:center;
   }
-.news-card-inner{
+  
+  /* ================= NEWS CARD ================= */
+  .news-card-inner{
     flex-direction:column;
     text-align:center;
     gap:40px;
 }
-.news-card{
+  .news-card{
       flex-direction:column;
       padding:100px 80px;
       gap:60px;
   }
   
   /* 文本更窄 */
-.news-content{
+  .news-content{
       max-width:520px;
       margin:0 auto;
       
@@ -386,8 +382,8 @@
       width:100%;
       
   }
-  /* 横向滚动 */
-
+  
+  /* ================= HORIZONTAL CAROUSEL ================= */
   .horizontal{
       margin:100px auto;
   }
@@ -396,7 +392,8 @@
       flex:0 0 calc((100% - 40px) / 2); /* 两张但更大 */
       height:320px; /* ↑ 比你现在更舒展 */
   }
- /* ================= SPLIT BLOCK ================= */
+  
+  /* ================= SPLIT BLOCK ================= */
   .split-block{
       grid-template-columns:1fr;
       gap:60px;
@@ -412,6 +409,7 @@
   }
   
   }
+
 
 /* ---------- 手机 ---------- */
 @media (max-width:768px){
