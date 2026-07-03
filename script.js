@@ -1,18 +1,17 @@
 // ================= COMPONENT =================
 function loadComponent(name, targetId) {
-    fetch(`components/${name}.html`)
+
+    return fetch(`components/${name}.html`)
         .then(r => r.ok ? r.text() : Promise.reject(r.status))
         .then(html => {
+
             const el = document.getElementById(targetId);
             if (!el) return;
 
             el.innerHTML = html;
 
             if (name === 'header') {
-                initHeaderScroll();
-                initMobileMenu(); 
-                adjustBodyPadding();
-                observeHeaderHeight();
+              
             }
         })
         .catch(console.error);
@@ -48,43 +47,28 @@ function initMobileMenu() {
     const menu = document.querySelector(".mobile-menu");
     const overlay = document.querySelector(".mobile-overlay");
 
-    if (!toggle || !menu) return;
+    console.log('menu init:', toggle, menu, overlay);
 
-    toggle.addEventListener("click", () => {
+    if (!toggle || !menu || !overlay) return;
 
-        // 按钮自己切换 active
-        toggle.classList.toggle("active");
-
-        // 菜单切换
-        menu.classList.toggle("active");
-
-        // 遮罩切换
-        overlay.classList.toggle("active");
-
-    });
-
-    // 点击遮罩关闭
-    overlay.addEventListener("click", () => {
-
+    function closeMenu() {
         toggle.classList.remove("active");
         menu.classList.remove("active");
         overlay.classList.remove("active");
+    }
 
+    toggle.addEventListener("click", () => {
+        console.log("clicked");
+        toggle.classList.toggle("active");
+        menu.classList.toggle("active");
+        overlay.classList.toggle("active");
     });
 
-    // 点击菜单后关闭
+    overlay.addEventListener("click", closeMenu);
+
     menu.querySelectorAll("a").forEach(link => {
-
-        link.addEventListener("click", () => {
-
-            toggle.classList.remove("active");
-            menu.classList.remove("active");
-            overlay.classList.remove("active");
-
-        });
-
+        link.addEventListener("click", closeMenu);
     });
-
 }
 
 // ================= PRODUCT CAROUSEL (FINAL) =================
@@ -229,15 +213,18 @@ function initScrollTop() {
 }
 
 // ================= INIT =================
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
 
-    loadComponent('header', 'header-container');
-    loadComponent('footer', 'footer-container');
+    await loadComponent('header', 'header-container');
+    await loadComponent('footer', 'footer-container');
 
-    setTimeout(() => {
-        initHorizontalSlider();   // ← 新增
-        initProductCarousel();   // ⭐ ONLY ONE SOURCE OF TRUTH
-        initScrollTop();
-    }, 80);
+    // ⭐关键：等 DOM 真正插入后再初始化 header
+    initHeaderScroll();
+    initMobileMenu();
+    adjustBodyPadding();
+    observeHeaderHeight();
+
+    initHorizontalSlider();
+    initProductCarousel();
+    initScrollTop();
 });
-

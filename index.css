@@ -28,10 +28,11 @@
 /* ===== Split ===== */
 .split-section{
     padding:120px 0px;
+  
     align-items: center;
     
   }
-.split-section .container{
+  .split-section .container{
     max-width: 1200px;
     margin: 0 auto;
     display:flex;
@@ -39,7 +40,8 @@
     gap:80px;
     padding: 0 60px;
     
-}
+    
+  }
   /* ==================================================
    Home Split（仅首页第一块）
 ================================================== */
@@ -105,11 +107,11 @@
   /* 外层背景 */
 .news-card{
   background:#edeceb;
-  padding:120px 40px;
+  padding:120px 20px;
 }
   /* 新增：真正控制版心 */
 .news-card-inner{
-  max-width:1280px;      /* 整体最大宽度 */
+  max-width:1100px;      /* 整体最大宽度 */
   margin:0 auto;
 
   display:flex;
@@ -121,10 +123,10 @@
   
 .news-content{
   flex: 1;
-  max-width: 420px; 
+  max-width: 420px;
 }
   
-.news-content .category {
+  .news-content .category {
     font-size: 12px;
     line-height: 1.7;
     letter-spacing: 1.5px;
@@ -133,35 +135,35 @@
     margin-bottom: 20px;
     text-transform: uppercase;
     
-}
+  }
   
-.news-content h2 {
+  .news-content h2 {
     font-size: 2em;
     line-height: 1.2;
     margin-bottom: 25px;
-}
+  }
   
-.news-content p {
+  .news-content p {
     font-size: 15px;
     line-height: 1.8;
     color: #444;
     margin-bottom: 30px;
     max-width: 480px;
-}
+  }
   
-.news-content .discover-link {
+  .news-content .discover-link {
     color: #111;
     text-decoration: none;
     font-size: 13px;
     letter-spacing: 1px;
-    border-bottom: 1px solid #aaaaaa;
+      border-bottom: 1px solid #aaaaaa;
     
     padding-bottom: 4px;
-}
+  }
   
   /* Image */
   
-.news-image {
+ .news-image {
     flex: 1;
     display: flex;
     justify-content: flex-end;
@@ -172,7 +174,7 @@
     max-width: 520px;
 
     height: auto;
-    
+  
 }
 /* ========================================== */
 /* 7. 模块5 & 6：左右图文混排
