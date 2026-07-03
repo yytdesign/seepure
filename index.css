@@ -29,14 +29,15 @@
 .split-section{
     padding:120px 0px;
     align-items: center;
-    transform: translateY(-10px);
+    
   }
 .split-section .container{
+    max-width: 1200px;
+    margin: 0 auto;
     display:flex;
     align-items: center;
     gap:80px;
-    padding: 40px 80px;
-    
+    padding: 0 60px;
     
 }
   /* ==================================================
@@ -119,10 +120,11 @@
   
   
 .news-content{
-  flex:0 0 480px;       /* 固定文字宽度 */
+  flex: 1;
+  max-width: 420px; 
 }
   
-  .news-content .category {
+.news-content .category {
     font-size: 12px;
     line-height: 1.7;
     letter-spacing: 1.5px;
@@ -131,35 +133,35 @@
     margin-bottom: 20px;
     text-transform: uppercase;
     
-  }
+}
   
-  .news-content h2 {
+.news-content h2 {
     font-size: 2em;
     line-height: 1.2;
     margin-bottom: 25px;
-  }
+}
   
-  .news-content p {
+.news-content p {
     font-size: 15px;
     line-height: 1.8;
     color: #444;
     margin-bottom: 30px;
     max-width: 480px;
-  }
+}
   
-  .news-content .discover-link {
+.news-content .discover-link {
     color: #111;
     text-decoration: none;
     font-size: 13px;
     letter-spacing: 1px;
-      border-bottom: 1px solid #aaaaaa;
+    border-bottom: 1px solid #aaaaaa;
     
     padding-bottom: 4px;
-  }
+}
   
   /* Image */
   
- .news-image {
+.news-image {
     flex: 1;
     display: flex;
     justify-content: flex-end;
@@ -167,11 +169,10 @@
 
 .news-image img {
     width: 100%;
-    max-width: 620px;
+    max-width: 520px;
 
     height: auto;
-    display: block;
-    object-fit: cover;
+    
 }
 /* ========================================== */
 /* 7. 模块5 & 6：左右图文混排
@@ -328,104 +329,105 @@
   /* 第一块左右图文 */
 
   .split-section{
-      padding:80px 0;
+     align-items:center;
+     max-width:520px;
+     margin:0 auto;
   }
 
   .split-section .container{
 
-      flex-direction:column;
-      gap:40px;
-      padding:0 40px;
-
+    flex-direction:column;
+    gap:60px; /* ↑ 更松 */
+    padding:0 40px;
+    text-align: center;
   }
 
 
-  .split-section .split-image{
-
-    margin-left:0;
-
+.split-section .split-image{
     width:100%;
+    max-width:900px;
+      
+    margin-left: 0 !important;
   }
-  .split-section .split-image img{
+.split-image img{
+    width:100%;
+    height:auto;
+    display:block;
+    object-fit:cover;
+}
+.split-section .split-image img{
 
-      height:auto;
+    aspect-ratio:4/5; /* ⭐ 关键：避免高度死锁 */
 
   }
 
 
-
+/* 文字变窄 + 更集中 */
   .split-content{
-
-      max-width:700px;
+      max-width:520px;   /* ↓ 变窄 */
       width:100%;
-
+      margin:0 auto;
+      font-size:14px;
+      line-height:1.75;
   }
 
-  .split-content h2{
-
-      margin-bottom:25px;
-
+ /* 标题更克制 */
+.split-content h2{
+      font-size:28px;
+      margin-bottom:20px;
+      text-align:center;
   }
-
+.news-card-inner{
+    flex-direction:column;
+    text-align:center;
+    gap:40px;
+}
+.news-card{
+      flex-direction:column;
+      padding:100px 80px;
+      gap:60px;
+  }
+  
+  /* 文本更窄 */
+.news-content{
+      max-width:520px;
+      margin:0 auto;
+      
+  }
+  
+.news-image{
+    justify-content:center;
+}
+.news-image img{
+      width:100%;
+      
+  }
   /* 横向滚动 */
 
   .horizontal{
-
-      margin:80px auto;
-
+      margin:100px auto;
   }
-
+  
   .card{
-    flex:0 0 calc((100% - 30px) / 2);
-    
-}
-
-    
-
-  /* News */
-
-  .news-card{
-
-      flex-direction:column;
-      padding:80px 40px;
-      gap:50px;
-
+      flex:0 0 calc((100% - 40px) / 2); /* 两张但更大 */
+      height:320px; /* ↑ 比你现在更舒展 */
   }
-
-  .news-content{
-
-      max-width:100%;
-      padding:0;
-
-  }
-
-  .news-image img{
-
-      width:100%;
-
-  }
-
-  /* Split Block */
-
+ /* ================= SPLIT BLOCK ================= */
   .split-block{
-
       grid-template-columns:1fr;
-      gap:40px;
-      margin-bottom:80px;
-      
-
+      gap:60px;
+      margin-bottom:100px;
   }
-
+  
   .image-right .split-text{
       order:1;
   }
-
+  
   .image-right .split-image{
       order:2;
   }
-
-}
-
+  
+  }
 
 /* ---------- 手机 ---------- */
 @media (max-width:768px){
