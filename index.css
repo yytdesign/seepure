@@ -296,23 +296,7 @@
    Responsive
    ========================================================== */
 
-/* ---------- iPad Pro / 小屏电脑 ---------- */
-@media (max-width:1400px){
 
-  .news-card{
-      padding:80px 120px;
-  }
-
-  .news-image img{
-      width:520px;
-  }
-
-  .split-section .container{
-      padding:40px 60px;
-      gap:60px;
-  }
-
-}
 
 
 /* ---------- iPad ---------- */
