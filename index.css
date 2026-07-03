@@ -28,18 +28,17 @@
 /* ===== Split ===== */
 .split-section{
     padding:120px 0px;
-  
     align-items: center;
     transform: translateY(-10px);
   }
-  .split-section .container{
+.split-section .container{
     display:flex;
     align-items: center;
     gap:80px;
     padding: 40px 80px;
     
     
-  }
+}
   /* ==================================================
    Home Split（仅首页第一块）
 ================================================== */
@@ -440,29 +439,56 @@
   }
 
   .hero-text{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transform: translateY(2px);
+}
+.hero-text h1{
+  margin: 0;
+  line-height: 1.1;
+}
 
-      font-size:30px;
-      padding:0 20px;
-
-  }
-
+    img{
+        width:100%;
+        height:auto;
+        display:block;
+    }
+  
+    .split-section .container,
+    .news-card,
+    .split-block{
+        flex-direction:column;
+        grid-template-columns:1fr;
+    }
+  
+  
   /* 第一块 */
 
   .split-section{
-
+      transform: none !important;
       padding:60px 0;
 
   }
 
   .split-section .container{
-
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center;
+      text-align: center;
       padding:0 20px;
       gap:30px;
 
   }
-
+  .split-content{
+    max-width:100%;
+    padding:0 20px;
+}
   .split-content h2{
-
+    
       font-size:26px;
 
   }
@@ -473,7 +499,22 @@
       line-height:1.8;
 
   }
-
+  .split-image img,
+  .news-image img{
+      height:auto !important;
+      max-height:none !important;
+      aspect-ratio:auto !important;
+  }
+  .split-section .split-image img,
+  .news-image img{
+      
+      max-height:none;
+      aspect-ratio:auto;
+  }
+  .split-image{
+    width:100%;
+    max-width:100%;
+}
   /* 横向滚动 */
 
   .horizontal{
@@ -489,11 +530,11 @@
   }
 
   .card{
-
-      flex:0 0 100%;
-    
-
-  }
+    flex:0 0 100%;
+    height:auto;
+    aspect-ratio:16/10;
+    overflow:hidden;
+}
 
   .scroll-btn{
 
@@ -505,7 +546,8 @@
   /* News */
 
   .news-card{
-
+      display: flex;
+      flex-direction: column;
       padding:60px 20px;
       gap:35px;
 
@@ -527,7 +569,8 @@
 
   .split-block{
 
-      
+      display: grid;
+      grid-template-columns: 1fr;
       margin-bottom:60px;
 
   }
@@ -552,7 +595,8 @@
 
   .hero{
 
-      height:60vh;
+      height:auto;
+      min-height: 60vh;
 
   }
 
@@ -581,7 +625,7 @@
   }
 
   .card{
-
+      aspect-ratio: 4/5;
       height: 260px;
 
   }
