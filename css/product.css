@@ -146,7 +146,7 @@ body {
 }
 
 .accordion {
-    margin: 20px 0;
+    margin: 30px;
     border-top: 1px solid #eee;
 }
 
@@ -154,15 +154,19 @@ body {
     border-bottom: 1px solid #eee;
 }
 
-.accordion-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 16px 0;
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    cursor: pointer;
+.accordion-header{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    cursor:pointer;
+
+    padding:20px 0;
+
+    font-size:15px;
+    font-weight:500;
+
 }
 
 .accordion-header:hover {
@@ -171,19 +175,93 @@ body {
 
 .accordion-icon {
     font-size: 16px;
+    transition: transform 0.3s;
 }
 
-.accordion-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-    font-size: 13px;
-    color: #555;
-}
+.accordion-content{
 
+    max-height:0;
+
+    overflow:hidden;
+
+    transition:max-height .35s ease;
+
+}
+/* 内层必须包一层 */
+.accordion-inner{
+
+    padding-bottom:20px;
+
+}
+/* 打开状态 */
+.accordion-item.active .accordion-content {
+    max-height:400px;
+}
+.accordion-item.active .accordion-icon {
+    transform: rotate(45deg);
+}
 .accordion-content.active {
     max-height: 200px;
     padding-bottom: 16px;
+}
+/* 内容间距 */
+.accordion-inner p{
+
+    margin-bottom:12px;
+
+    font-size:14px;
+
+    color:#555;
+
+    line-height:1.6;
+
+}
+/* 产品规格 Accordion */
+
+.spec-accordion{
+
+    border-top:1px solid #eee;
+
+}
+
+.spec-accordion .accordion-header{
+
+    display:grid;
+
+    grid-template-columns:160px 1fr 30px;
+
+    align-items:center;
+
+    gap:20px;
+
+    padding:16px 0;
+
+}
+
+.accordion-value{
+
+    color:#555;
+
+    font-size:14px;
+
+}
+
+.spec-accordion .accordion-inner p{
+
+    padding:8px 0;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.spec-accordion .accordion-inner p:hover{
+
+    color:#000;
+
+    padding-left:10px;
+
 }
 
 .image-numbers {

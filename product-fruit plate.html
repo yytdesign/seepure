@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Seepure | product | Fruit plate</title>
+    <title>Seepure | Product | Fruit plate</title>
     
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="components/header.css">
     <link rel="stylesheet" href="components/footer.css">
-    <link rel="stylesheet" href="product.css">
+    <link rel="stylesheet" href="css/product.css">
 </head>
 <body>
 
@@ -35,14 +35,14 @@
             <div style="display: none;" id="imageData" 
                data-images='[
                      "https://cdn.jsdelivr.net/gh/yytdesign/webtu/yytu/marble%20fruit%20plate.JPG",
-                     "https://cdn.jsdelivr.net/gh/yytdesign/webtu/yytu/main.jpg",
+                     "https://cdn.jsdelivr.net/gh/yytdesign/webtu/yytu/the%20fruit%20plate%2001.jpg",
                      "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=800",
                      "https://cdn.jsdelivr.net/gh/yytdesign/webtu/yytu/main.jpg"
                     ]'>
             </div>
             
             <div class="product-info">
-                <h1>THE 45 CHAIR <span class="subtitle">| FINN JUHL | 1945</span></h1>
+                <h1>The Fruit Plate <span class="subtitle">| SEEPURE | see natural</span></h1>
                 
                 <p class="description">
                     In the fall of 1945, Finn Juhl unveiled the 45 Chair at the Copenhagen Cabinetmakers' Guild Exhibition. 
@@ -52,14 +52,59 @@
                     The frame is available in oak or walnut.
                 </p>
                 
-                <div class="spec-row">
-                    <div class="spec-label">Wood Type</div>
-                    <div class="spec-value">Walnut <span class="spec-action">+</span></div>
-                </div>
-                <div class="spec-row">
-                    <div class="spec-label">Upholstery</div>
-                    <div class="spec-value">Vidar <span class="spec-number">222</span> <span class="spec-action">+</span></div>
-                </div>
+                <!-- Wood Type -->
+<div class="accordion-item spec-accordion">
+
+    <div class="accordion-header">
+        <span>Marble Type</span>
+        <span class="accordion-value">
+            White
+        </span>
+
+        <span class="accordion-icon">+</span>
+    </div>
+
+    <div class="accordion-content">
+        <div class="accordion-inner">
+
+            <p>Walnut</p>
+            <p>Oak</p>
+            <p>Black Oak</p>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- Upholstery -->
+<div class="accordion-item spec-accordion">
+
+    <div class="accordion-header">
+
+        <span>Upholstery</span>
+
+        <span class="accordion-value">
+            Vidar 222
+        </span>
+
+        <span class="accordion-icon">+</span>
+
+    </div>
+
+    <div class="accordion-content">
+
+        <div class="accordion-inner">
+
+            <p>Vidar 222</p>
+            <p>Hallingdal 65</p>
+            <p>Leather Black</p>
+            <p>Leather Cognac</p>
+
+        </div>
+
+    </div>
+
+</div>
                 
                 <p class="note">
                     Please note that the versions shown here represent only a selection of the many available options. 
@@ -67,24 +112,39 @@
                 </p>
                 
                 <div class="accordion">
-                    <div class="accordion-item">
-                        <div class="accordion-header">Product details <span class="accordion-icon">+</span></div>
-                        <div class="accordion-content">
-                            <p>Designer: Finn Juhl</p>
-                            <p>Year: 1945, relaunched in 2003</p>
-                            <p>Materials: Frame: Oak or walnut / Upholstery: Textile or leather</p>
-                            <p>Dimensions: W 66.5 cm | D 73 cm | H 85 cm | Seat height: 44 cm</p>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <div class="accordion-header">Download files <span class="accordion-icon">+</span></div>
-                        <div class="accordion-content">
-                            <p>2D Drawing (PDF) - <a href="#">Download</a></p>
-                            <p>3D Model (ZIP) - <a href="#">Download</a></p>
-                            <p>Product Sheet (PDF) - <a href="#">Download</a></p>
-                        </div>
-                    </div>
-                </div>
+
+    <div class="accordion-item">
+        <div class="accordion-header">
+            <span>Product details</span>
+            <span class="accordion-icon">+</span>
+        </div>
+
+        <div class="accordion-content">
+            <div class="accordion-inner">
+                <p>Designer: Finn Juhl</p>
+                <p>Year: 1945, relaunched in 2003</p>
+                <p>Materials: Frame: Oak or walnut / Upholstery: Textile or leather</p>
+                <p>Dimensions: W 66.5 cm | D 73 cm | H 85 cm | Seat height: 44 cm</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <div class="accordion-header">
+            <span>Download files</span>
+            <span class="accordion-icon">+</span>
+        </div>
+
+        <div class="accordion-content">
+            <div class="accordion-inner">
+                <p><a href="#">2D Drawing (PDF)</a></p>
+                <p><a href="#">3D Model (ZIP)</a></p>
+                <p><a href="#">Product Sheet (PDF)</a></p>
+            </div>
+        </div>
+    </div>
+
+</div>
                 
                 <div class="image-numbers" id="imageNumbers">
                     <span class="num active" data-index="0">01</span>
@@ -283,7 +343,7 @@
     <!-- footer 会加载到这里 -->
     <div id="footer-container"></div>
 
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
     
     
 

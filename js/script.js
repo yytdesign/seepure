@@ -1,20 +1,66 @@
 // ================= COMPONENT =================
 function loadComponent(name, targetId) {
 
-    return fetch(`components/${name}.html`)
+    // 判断当前是否中文页面
+    const isChinese = window.location.pathname.includes("/cn/");
+
+
+    let componentName = name;
+    let componentPath = "components/";
+
+
+    // 中文页面
+    if (isChinese) {
+
+        componentName = `${name}-cn`;
+
+        componentPath = "../components/";
+
+    } 
+    
+    // 英文页面
+    else {
+
+        componentName = `${name}-en`;
+
+    }
+
+
+    return fetch(`${componentPath}${componentName}.html`)
+
         .then(r => r.ok ? r.text() : Promise.reject(r.status))
+
         .then(html => {
 
             const el = document.getElementById(targetId);
+
             if (!el) return;
+
 
             el.innerHTML = html;
 
+
+            // Header加载完成后的功能
             if (name === 'header') {
-              
+
+                // 这里保持你原来的header初始化
+                if(typeof initHeaderScroll === "function"){
+                    initHeaderScroll();
+                }
+
+
+                if(typeof initMobileMenu === "function"){
+                    initMobileMenu();
+                }
+
             }
+
+
         })
-        .catch(console.error);
+
+        .catch(error => {
+            console.error("Component loading error:", error);
+        });
 }
 
 function adjustBodyPadding() {
@@ -160,11 +206,11 @@ function initHorizontalSlider() {
 
         const maxIndex = cards.length - visible;
 
-        if(index > maxIndex){
+        if (index > maxIndex) {
             index = maxIndex;
         }
 
-        if(index < 0){
+        if (index < 0) {
             index = 0;
         }
 
@@ -177,7 +223,7 @@ function initHorizontalSlider() {
 
         const maxIndex = cards.length - getVisibleCount();
 
-        if(index < maxIndex){
+        if (index < maxIndex) {
             index++;
             updateSlider();
         }
@@ -186,7 +232,7 @@ function initHorizontalSlider() {
 
     prev.addEventListener("click", () => {
 
-        if(index > 0){
+        if (index > 0) {
             index--;
             updateSlider();
         }

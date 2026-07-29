@@ -75,13 +75,15 @@
     color: #111;
     opacity: 0.7;
     transition: all 0.3s ease;
-    cursor: pointer;  /* 添加手型光标 */
+    cursor: pointer;
+    /* 添加手型光标 */
 }
 
 .footer-col a:hover {
     opacity: 1;
     color: #000;
-    transform: translateX(3px);  /* 可选：悬停时轻微右移 */
+    transform: translateX(3px);
+    /* 可选：悬停时轻微右移 */
 }
 
 /* =========================
@@ -103,7 +105,7 @@
         padding: 60px 40px;
         gap: 50px;
     }
-    
+
     .footer-links {
         gap: 50px;
     }
@@ -113,27 +115,27 @@
     .footer {
         margin-top: 60px;
     }
-    
+
     .footer-inner {
         flex-direction: column;
         gap: 40px;
         padding: 50px 30px;
     }
-    
+
     .footer-links {
         flex-direction: column;
         gap: 30px;
     }
-    
+
     .footer-brand {
         text-align: center;
     }
-    
+
     .footer-brand p {
         max-width: 100%;
         margin: 0 auto;
     }
-    
+
     .footer-col {
         text-align: center;
         align-items: center;
@@ -144,7 +146,7 @@
     .footer-inner {
         padding: 40px 20px;
     }
-    
+
     .footer-bottom {
         font-size: 11px;
         padding: 15px;

@@ -1,9 +1,4 @@
-/* ============================================
-   Finn Juhl 叙事滚动布局 - 独立样式表
-   七屏滚动结构：全屏图像、左右图组合、居中引文、视频区
-   第六屏：文字居中于上方，视频全宽沉浸
-   所有图片圆角均已设置为 0
-   ============================================ */
+
 
    * {
     margin: 0;
@@ -53,7 +48,7 @@ body {
 
 /* ========== 第一屏：全屏背景图 + 文字居中 ========== */
 .screen-1 {
-    background-image: url('https://placehold.co/1920x1080/D4C5B1/8B6F50?text=Finn+Juhl+Joinery');
+    background-image: url('https://images.unsplash.com/photo-1524758631624-e2822e304c36');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
