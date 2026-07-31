@@ -212,19 +212,8 @@
     display: block;
 }
 
-.scroll-top{
-    position:fixed;
-    right:40px;
-    bottom:40px;
-    z-index:1000;
-}
 
-.floating-logo{
-    position:fixed;
-    right:40px;
-    bottom:150px;
-    z-index:1000;
-}
+
 /* 
  * 6:4 比例让高图占 60%，矮图占 40%
  * 两栏的 6+4 = 10 份，分配方式相反
