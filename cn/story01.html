@@ -1,163 +1,182 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cn">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seepure | Home</title>
-    
+
     <!-- 主样式 -->
     <link rel="stylesheet" href="../css/style.css">
-    
+
     <!-- 组件样式 -->
     <link rel="stylesheet" href="../components/header.css">
     <link rel="stylesheet" href="../components/footer.css">
     <link rel="stylesheet" href="../css/story01.css">
-    
+
     <!-- GSAP -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
 </head>
+
 <body>
-     <!-- header 会加载到这里 -->
+    <!-- header 会加载到这里 -->
     <div id="header-container"></div>
 
     <section class="editorial-hero">
 
         <!-- breadcrumb -->
         <div class="eyebrow">
-            NEWS & STORIES | NEW EXHIBITION AT HOUSE OF FINN JUHL
+            从茧到蝶的蜕变 | 即是设计的重生
         </div>
-    
+
         <!-- title -->
         <h1>
-            New Exhibition Celebrates Finn Juhl's<br>
-            Unparalleled Attention to Detail
+            天然具备「秩序感」与「装饰性」
+            <br>翅膀的对称轮廓是自然界最完美的几何结构之一
+
         </h1>
-    
+
         <!-- intro -->
         <p class="intro">
-            House of Finn Juhl presents The Deviation is in the Detail – an exhibition exploring the subtle,
-            unexpected details that elevate furniture from the purely functional to the artistic.
-            Taking its title from one of Finn Juhl’s most celebrated quotes, the exhibition unfolds as a dialogue
-            between iconic furniture design, modern art, and contemporary collaborations.
+            您知道吗，蝴蝶从茧到蝶的蜕变，和厨房里的每一次烹饪很像——切割、
+            重组、创造，都是蜕变的过程。我们想把这个意象，做成一个每天陪伴你的厨房物件。
         </p>
-    
+
         <!-- image -->
         <div class="hero-image">
+            <img src="https://cdn.jsdelivr.net/gh/yytdesign/webtu/yytu/concept01-m.png" alt="">
+        </div>
+
+    </section>
+
+    <!-- QUOTE + TEXT BLOCK -->
+    <section class="quote-block">
+
+        <p class="quote">
+            " 茧 ｜ 变 ｜ 蝶 "
+        </p>
+
+        <div class="text-wrap">
+            <p>
+                OBSERVE 观察自然 ｜ 蝴蝶的翅膀不是装饰，是数百万年进化的空气动力学解决方案。<br>
+                EXTRACT 提取智慧 | 大理石的纹理不是图案，是地质时间的记录；透明不是空白，是轻盈。<br>
+                INTEGRATE 融入设计 | 不模仿自然的形状，而是理解自然的逻辑——对称、通透、过渡。
+            </p>
+
+            <p>
+                "茧"<br>
+                厚重 · 天然 · 沉淀<br><br>
+                "变"<br>
+                连接 · 承托 · 蜕变 <br><br>
+                "蝶"<br>
+                轻盈 · 通透 · 保护
+            </p>
+        </div>
+
+    </section>
+
+
+
+    <!-- SPLIT IMAGE SECTION -->
+    <section class="image-split">
+
+        <div class="img left">
+            <img src="https://cdn.jsdelivr.net/gh/yytdesign/webtu/yytu/butterfly-midline.jpeg">
+        </div>
+
+        <div class="img right">
+            <img src="ttps://cdn.jsdelivr.net/gh/yytdesign/webtu/yytu/butterfly-midline.jpeg">
+        </div>
+
+    </section>
+
+    <!-- SPLIT TEXT + IMAGE (VARIANT 2) -->
+    <section class="split-variant">
+
+        <div class="image-side-large">
+            <img src="img/03.jpg">
+        </div>
+
+        <div class="text-side-narrow">
+
+            <h2>"形态即功能"</h2>
+
+                    <p>
+                        「中央的大理石主体象征『茧』的沉稳与孕育，两侧的透明翅膀让刀具如悬浮于蝶翼之
+                        间，既保护刀刃又不遮挡视线。顶部的剪刀位像蝴蝶的触角，是功能也是点睛之笔。材质从厚重的大理石过渡到“轻盈”的磨砂超白玻璃，本身就是一场蜕变。」
+                    </p><br>
+
+                    <p>
+                        分类收纳：翅膀对称展开形成左右分区，大刀居翼、小刀靠身，剪刀置顶如触角；<br>
+                        视觉通透：磨砂钢化超白玻璃翅膀不遮挡视线，刀具如悬浮于蝶翼之间，厨房空间更开阔；<br>
+                        稳定承重：大理石柱重心低，翅膀展开加大底面支撑，如蝴蝶停栖般稳定；<br>
+                        易于清洁：光滑大理石表面 + 磨砂钢化超白玻璃无孔隙材质，一擦即净，不留菌渍。
+                    </p><br><br>
+
+                    <h2>"材质即叙事"</h2>
+                    <p>
+                        <b>大理石</b> Marble <br>
+                        地质千年沉淀 <br>
+                        纹理独一无二，温润与冷峻并存，<br>
+                        是"茧"的实体化<br><br>
+
+                        <b>玻璃</b> Glass <br>
+                        生命的轻盈 <br>
+                        高透光率，无负重感，<br>
+                        现代感与自然感的平衡
+                    </p>
+
+        </div>
+
+    </section>
+
+    <!-- IMAGE GRID SECTION -->
+    <section class="image-split fix">
+        <div class="right">
             <img src="https://images.unsplash.com/photo-1588854337221-4cf9fa96059c" alt="">
         </div>
-    
+
+        <div class="left">
+            <img src="https://images.unsplash.com/photo-1588854337221-4cf9fa96059c" alt="">
+        </div>
+
+
+
     </section>
-   
-     <!-- QUOTE + TEXT BLOCK -->
-<section class="quote-block">
 
-    <p class="quote">
-        "The deviation is in the detail."
-    </p>
+    <!-- SECTION TITLE -->
+    <section class="section-title">
+        <h2>"每一次归位，都是一次停栖。"</h2>
+    </section>
 
-    <div class="text-wrap">
+    <!-- TEXT BLOCK -->
+    <section class="text-block">
         <p>
-            This is how Finn Juhl himself described the approach to design that made him one of the most influential figures in Danish design.
-            The quote frames a new exhibition at House of Finn Juhl’s showroom on Gothersgade, where historic works and new interpretations highlight design heritage,
-            artistic inspiration, and meticulous craftsmanship.
+            这不仅是一个刀座，更是 See Nature 理念在厨房的落地——每一次把刀归位，
+            都像蝴蝶停驻花瓣般自然。让下厨，成为一种有仪式感的停栖。
         </p>
 
+
+    </section>
+
+    <section class="final-text">
         <p>
-            Curated by the architectural duo Mentze Ottenstein, the exhibition unfolds as a spatial landscape of brick plinths and cherrywood room dividers,
-            referencing Finn Juhl’s own architectural thinking. Here, some of his most groundbreaking furniture pieces are presented alongside works by three iconic artists
-            who played a central role in his creative universe.
+            <b>美学价值</b><br><br>自然形态的现代演绎，<br>厨房中的艺术装置<br><br>
+            <b>功能价值</b><br><br>分类清晰、取放直觉、<br>通透不挡视线，厨房空间更开阔<br><br>
+            <b>情感价值</b><br><br>See Nature 理念落地，<br>让日常烹饪充满自然仪式感<br>
         </p>
-    </div>
+    </section>
 
-</section>
- 
-
-
-<!-- SPLIT IMAGE SECTION -->
-<section class="image-split">
-
-    <div class="img left">
-        <img src="img/left.jpg">
-    </div>
-
-    <div class="img right">
-        <img src="img/right.jpg">
-    </div>
-
-</section>
-
-<!-- SPLIT TEXT + IMAGE (VARIANT 2) -->
-<section class="split-variant">
-
-    <div class="image-side-large">
-        <img src="img/03.jpg">
-    </div>
-
-    <div class="text-side-narrow">
-
-        <h2>Abstract Art as a Source of Inspiration</h2>
-
-        <p>
-            Finn Juhl once dreamed of becoming an art historian and was among the first Danish furniture designers to openly draw inspiration from modern art.
-            While many of his contemporaries looked to traditional craftsmanship, he turned to the free forms and abstract visual language of art.
-        </p>
-
-        <p>
-            For this reason, works by Sonja Ferlov Mancoba, Vilhelm Lundstrøm, and Sigurdur Guðmundsson form an integral part of the exhibition.
-            All three artists were active in the 1940s, when Finn Juhl created some of his most pioneering designs.
-        </p>
-
-        <p>
-            The exhibition brings together a selection of Finn Juhl’s most significant works, among them the Chieftain Sofa, the Pelican Chair, and the 45 Chair.
-        </p>
-
-    </div>
-
-</section>
-
-<!-- IMAGE GRID SECTION -->
-<section class="image-split fix">
-    <div class="right">
+    <section class="full-image">
         <img src="https://images.unsplash.com/photo-1588854337221-4cf9fa96059c" alt="">
-    </div>
-
-    <div class="left">
-        <img src="https://images.unsplash.com/photo-1588854337221-4cf9fa96059c" alt="">
-    </div>
-
-   
-
-</section>
-
-<!-- SECTION TITLE -->
-<section class="section-title">
-    <h2>Cross-Disciplinary Collaboration</h2>
-</section>
-
-<!-- TEXT BLOCK -->
-<section class="text-block">
-    <p>
-        As a contemporary interpretation of Finn Juhl’s universe, House of Finn Juhl also presents an exclusive collaboration with the New York-based fashion brand Sea New York.
-        Under the creative direction of Monica Paolini, Sea has developed a series of embroidered textiles specifically for Finn Juhl’s minimalist Japan Series.
-    </p>
-
-    <p>
-        The embroidered textiles add a new tactile dimension to the furniture and create a dialogue between furniture design, fashion, and craft.
-        Rooted in a shared fascination with craftsmanship, materiality, and attention to detail.
-    </p>
-</section>
-
-<section class="final-text">
-    <p>
-        The Deviation is in the Detail opened during this year’s 3daysofdesign, but will remain on view until autumn, with a rotating selection of artworks continuously featured throughout the exhibition.
-    </p>
-</section>
-
-<section class="full-image">
-    <img src="https://images.unsplash.com/photo-1588854337221-4cf9fa96059c" alt="">
-</section>
-
+    </section>
+    <section class="final-text">
+        <p>
+            <b>自然法则</b><br>
+            对称 · 通透 · 过渡 · 生长 · 肌理
+        </p>
+    </section>
 
     <div class="scroll-top"></div>
     <a href="index.html" class="floating-logo">SP</a>
@@ -168,4 +187,5 @@
     <!-- JS -->
     <script src="../js/script.js"></script>
 </body>
+
 </html>
