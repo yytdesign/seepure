@@ -106,8 +106,9 @@ section:first-of-type{
 
 /* ===== Editorial ===== */
 .editorial{
-  background:#f5f5f5;
+  background:#ededed;
   padding:160px 20px;
+  margin: 150px auto 0;
 }
 
 .editorial-inner{

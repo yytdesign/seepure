@@ -22,7 +22,7 @@
 .grid-layout {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
-    gap: 28px;
+    gap: 40px;
     max-width: 1400px;
     margin: 0 auto;
     padding: 10px 40px 30px;
@@ -33,8 +33,10 @@
 .card-large {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 20px;
     height: 100%;
+
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .card-large img {
@@ -45,12 +47,22 @@
     display: block;
     background: #e8e3db;
     flex-shrink: 0;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.card-large:hover {
+    transform: translateY(-6px);
+}
+
+.card-large img:hover {
+
+    transform: scale(1.02);
 }
 
 .card-large .content {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 8px;
 }
 
 .card-large .content h2 {
@@ -81,6 +93,7 @@
 }
 
 .card-large .content a:hover {
+    transform: scale(1.06);
     border-bottom-color: #000;
 }
 
@@ -96,9 +109,10 @@
 .card-small {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 20px;
     flex: 1;
     min-height: 0;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .card-small img {
@@ -109,16 +123,26 @@
     display: block;
     background: #e8e3db;
     flex-shrink: 0;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.card-small:hover {
+
+    transform: translateY(-6px);
+}
+
+.card-small img:hover {
+    transform: scale(1.06);
 }
 
 .card-small .content-small {
     display: flex;
     flex-direction: column;
-    gap: 2px;
+    gap: 8px;
 }
 
 .card-small .content-small h3 {
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 500;
     line-height: 1.3;
     margin-bottom: 2px;
@@ -126,7 +150,7 @@
 }
 
 .card-small .content-small p {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 1.5;
     color: #4a4540;
     opacity: 0.8;
@@ -134,7 +158,7 @@
 }
 
 .card-small .content-small a {
-    font-size: 12px;
+    font-size: 14px;
     color: #1a1714;
     text-decoration: none;
     border-bottom: 1px solid #d0c8be;
@@ -145,6 +169,7 @@
 }
 
 .card-small .content-small a:hover {
+    transform: scale(1.02);
     border-bottom-color: #000;
 }
 
@@ -203,6 +228,7 @@
     flex: 1;
     aspect-ratio: 3 / 4;
 }
+
 /* ===== 修复 footer ===== */
 #footer-container {
     position: relative;
@@ -227,194 +253,194 @@
 =========================================================== */
 
 /* ---------- 1400px ---------- */
-@media (max-width:1400px){
+@media (max-width:1400px) {
 
-    .grid-layout{
-        max-width:1100px;
-        gap:24px;
-        padding:20px 30px;
+    .grid-layout {
+        max-width: 1100px;
+        gap: 24px;
+        padding: 20px 30px;
     }
 
 }
 
 
 /* ---------- 1200px ---------- */
-@media (max-width:1200px){
+@media (max-width:1200px) {
 
-    .grid-layout{
-        grid-template-columns:1.7fr 1fr 1fr;
-        gap:22px;
-        padding:20px 24px;
+    .grid-layout {
+        grid-template-columns: 1.7fr 1fr 1fr;
+        gap: 22px;
+        padding: 20px 24px;
     }
 
 }
 
 
 /* ---------- iPad ---------- */
-@media (max-width:992px){
+@media (max-width:992px) {
 
-    .intro{
-        padding:40px 20px 25px;
+    .intro {
+        padding: 40px 20px 25px;
     }
 
-    .intro h1{
-        font-size:26px;
+    .intro h1 {
+        font-size: 26px;
     }
 
-    .grid-layout{
+    .grid-layout {
 
-        grid-template-columns:1fr 1fr;
+        grid-template-columns: 1fr 1fr;
 
-        gap:22px;
+        gap: 22px;
 
-        padding:20px;
+        padding: 20px;
     }
 
-    .card-large{
-        grid-column:1 / -1;
+    .card-large {
+        grid-column: 1 / -1;
     }
 
-    .cards-column{
-        gap:18px;
+    .cards-column {
+        gap: 18px;
     }
 
 }
 
 
 /* ---------- Mobile ---------- */
-@media (max-width:768px){
+@media (max-width:768px) {
 
-    .intro{
-    
-        padding:30px 20px;
-    
+    .intro {
+
+        padding: 30px 20px;
+
     }
-    
-    .intro h1{
-    
-        font-size:24px;
-    
+
+    .intro h1 {
+
+        font-size: 24px;
+
     }
-    
-    .grid-layout{
-    
-        grid-template-columns:1fr;
-    
-        gap:30px;
-    
-        padding:20px;
-    
-        align-items:start;
-    
+
+    .grid-layout {
+
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+
+        padding: 20px;
+
+        align-items: start;
+
     }
-    
-    .card-large{
-    
-        grid-column:auto;
-    
+
+    .card-large {
+
+        grid-column: auto;
+
     }
-    
-    .cards-column{
-    
-        display:block;
-    
+
+    .cards-column {
+
+        display: block;
+
     }
-    
-    .card-small{
-    
-        flex:none;
-    
-        height:auto;
-    
-        margin-bottom:28px;
-    
+
+    .card-small {
+
+        flex: none;
+
+        height: auto;
+
+        margin-bottom: 28px;
+
     }
-    
-    .card-small:last-child{
-    
-        margin-bottom:0;
-    
+
+    .card-small:last-child {
+
+        margin-bottom: 0;
+
     }
-    
+
     .card-large img,
-    .card-small img{
-    
-        width:100%;
-    
-        height:auto;
-    
-        aspect-ratio:3/4;
-    
+    .card-small img {
+
+        width: 100%;
+
+        height: auto;
+
+        aspect-ratio: 3/4;
+
     }
-    
+
     .cards-column .card-tall,
-    .cards-column .card-short{
-    
-        flex:none;
-    
+    .cards-column .card-short {
+
+        flex: none;
+
     }
-    
+
     .cards-column .card-tall img,
-    .cards-column .card-short img{
-    
-        height:auto;
-    
-        flex:none;
-    
+    .cards-column .card-short img {
+
+        height: auto;
+
+        flex: none;
+
     }
-    
-    }
+
+}
 
 /* ---------- Small Mobile ---------- */
-@media (max-width:576px){
+@media (max-width:576px) {
 
-    .intro{
+    .intro {
 
-        padding:24px 16px;
-
-    }
-
-    .intro h1{
-
-        font-size:22px;
+        padding: 24px 16px;
 
     }
 
-    .intro p{
+    .intro h1 {
 
-        font-size:13px;
-
-    }
-
-    .grid-layout{
-
-        padding:16px;
-
-        gap:22px;
+        font-size: 22px;
 
     }
 
-    .card-large .content h2{
+    .intro p {
 
-        font-size:18px;
-
-    }
-
-    .card-large .content p{
-
-        font-size:13px;
+        font-size: 13px;
 
     }
 
-    .card-small .content-small h3{
+    .grid-layout {
 
-        font-size:14px;
+        padding: 16px;
+
+        gap: 22px;
 
     }
 
-    .card-small .content-small p{
+    .card-large .content h2 {
 
-        font-size:12px;
+        font-size: 18px;
+
+    }
+
+    .card-large .content p {
+
+        font-size: 13px;
+
+    }
+
+    .card-small .content-small h3 {
+
+        font-size: 14px;
+
+    }
+
+    .card-small .content-small p {
+
+        font-size: 12px;
 
     }
 

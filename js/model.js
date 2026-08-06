@@ -12,7 +12,11 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 // ============================================================
 const CONFIG = {
     // 替换成你的模型文件路径（支持 .glb 或 .gltf）
+<<<<<<< HEAD
     modelPath: 'https://threejs.org/examples/models/gltf/DamagedHelmet/glTF/DamagedHelmet.gltf',
+=======
+    modelPath: 'https://cdn.jsdelivr.net/gh/yytdesign/webtu/yytu/butterfly-molde.glb',
+>>>>>>> 983cd01c8c2f31891734bf4c1eead365f9ebe949
     
     // 容器ID（必须和HTML中的ID一致）
     containerId: 'product-3d-viewer',
