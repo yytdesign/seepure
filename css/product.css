@@ -224,7 +224,7 @@ body {
 /* 产品规格 Accordion */
 
 .spec-accordion {
-    margin:30px 0;
+    margin: 30px 0;
     border-top: 1px solid #eee;
 
 }
@@ -628,6 +628,7 @@ body {
     .split-title,
     .partners-title {
         font-size: 22px;
+
     }
 
     .revolution-text,
@@ -644,5 +645,14 @@ body {
 
     .quote p {
         font-size: 14px;
+    }
+
+    .product-info,
+    .revolution-left {
+        padding: 30px 40px;
+    }
+
+    .experiment-section {
+        padding: 30px 25px;
     }
 }
