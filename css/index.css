@@ -292,7 +292,17 @@
   background:linear-gradient(to bottom, transparent, #f5f5f5 50%, transparent);
 }
 
+.product-info{
+  position:relative;
+    z-index:2;
+    color:#fff;
+    font-size:28px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height:100%;
 
+}
 
 /* ==========================================================
    Responsive
