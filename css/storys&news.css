@@ -298,10 +298,12 @@
 
     .card-large {
         grid-column: 1 / -1;
+        padding: 0 30px;
     }
 
     .cards-column {
         gap: 18px;
+        padding: 0 30px;
     }
 
 }
