@@ -183,13 +183,13 @@ section:first-of-type{
 @media (max-width: 768px) {
   .product-grid {
       grid-template-columns: 1fr;
-      gap: 40px;
-      padding: 0 24px;
+      gap: 20px;
+      padding: 0 15px;
       margin: 40px auto 0;
   }
   
  .large {
-      grid-column: span 1;
+      grid-column: span 2;
   }
   
   .product-image {

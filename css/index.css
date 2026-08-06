@@ -1,270 +1,281 @@
-
-
 /* ===== HERO ===== */
-.hero{
-    height:100vh;
-    position:relative;
-    overflow: hidden;
-  }
-  .hero video{
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    object-fit:cover;
+.hero {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
 }
-  .hero-text{
-    position:relative;
-    z-index:2;
-    color:#fff;
-    font-size:48px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    height:100%;
-  }
-  
+
+.hero video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  font-size: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
 /* ===== Split ===== */
-.split-section{
-    padding:120px 0px;
-  
-    align-items: center;
-    
-  }
-  .split-section .container{
-    max-width: 1200px;
-    margin: 0 auto;
-    display:flex;
-    align-items: center;
-    gap:80px;
-    padding: 0 60px;
-    
-    
-  }
-  /* ==================================================
+.split-section {
+  padding: 120px 0px;
+
+  align-items: center;
+
+}
+
+.split-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  padding: 0 60px;
+
+
+}
+
+/* ==================================================
    Home Split（仅首页第一块）
 ================================================== */
 
-.split-section .split-image{
-  flex:0 0 65%;
-  margin-left:-60px;
+.split-section .split-image {
+  flex: 0 0 65%;
+  margin-left: -60px;
 }
 
-.split-section .split-image img{
-  height:520px;
+.split-section .split-image img {
+  height: 520px;
 }
-  /* ==================================================
+
+/* ==================================================
    Split Image（公共）
 ================================================== */
 
-.split-image{
-  width:100%;
-  overflow:hidden;
-  border-radius:0;
+.split-image {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 0;
 }
 
-.split-image img{
-  width:100%;
-  display:block;
-  object-fit:cover;
+.split-image img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
 }
 
 /* ==================================================
    Split Block（模块5、6）
 ================================================== */
 
-.split-block .split-image{
-  width:100%;
+.split-block .split-image {
+  width: 100%;
 }
 
-.split-block .split-image img{
-  height:auto;
+.split-block .split-image img {
+  height: auto;
 }
 
-  .split-content{
-    flex: 0 0 35%;
-    max-width: 420px; /* ⭐限制文字宽度 */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-self: center;
-  }
-  .split-content h2{
-    font-size:28px;
-    margin-bottom:50px;
-  }
-  
-  .split-content p{
-    font-size:14px;
-    line-height:1.8;
-    color:#444;
-  }
-  
-  
-  
-  /* News Card */
-  /* 外层背景 */
-.news-card{
-  background:#edeceb;
-  padding:120px 20px;
+.split-content {
+  flex: 0 0 35%;
+  max-width: 420px;
+  /* ⭐限制文字宽度 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
 }
-  /* 新增：真正控制版心 */
-.news-card-inner{
-  max-width:1100px;      /* 整体最大宽度 */
-  margin:0 auto;
 
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:60px;
+.split-content h2 {
+  font-size: 28px;
+  margin-bottom: 50px;
 }
-  
-  
-.news-content{
+
+.split-content p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #444;
+}
+
+
+
+/* News Card */
+/* 外层背景 */
+.news-card {
+  background: #edeceb;
+  padding: 120px 20px;
+}
+
+/* 新增：真正控制版心 */
+.news-card-inner {
+  max-width: 1100px;
+  /* 整体最大宽度 */
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+
+.news-content {
   flex: 1;
   max-width: 420px;
 }
-  
-  .news-content .category {
-    font-size: 12px;
-    line-height: 1.7;
-    letter-spacing: 1.5px;
-    color: #666;
-    display: block;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    
-  }
-  
-  .news-content h2 {
-    font-size: 2em;
-    line-height: 1.2;
-    margin-bottom: 25px;
-  }
-  
-  .news-content p {
-    font-size: 15px;
-    line-height: 1.8;
-    color: #444;
-    margin-bottom: 30px;
-    max-width: 480px;
-  }
-  
-  .news-content .discover-link {
-    color: #111;
-    text-decoration: none;
-    font-size: 13px;
-    letter-spacing: 1px;
-      border-bottom: 1px solid #aaaaaa;
-    
-    padding-bottom: 4px;
-  }
-  
-  /* Image */
-  
- .news-image {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
+
+.news-content .category {
+  font-size: 12px;
+  line-height: 1.7;
+  letter-spacing: 1.5px;
+  color: #666;
+  display: block;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+
+}
+
+.news-content h2 {
+  font-size: 2em;
+  line-height: 1.2;
+  margin-bottom: 25px;
+}
+
+.news-content p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 30px;
+  max-width: 480px;
+}
+
+.news-content .discover-link {
+  color: #111;
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 1px;
+  border-bottom: 1px solid #aaaaaa;
+
+  padding-bottom: 4px;
+}
+
+/* Image */
+
+.news-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .news-image img {
-    width: 100%;
-    max-width: 520px;
+  width: 100%;
+  max-width: 520px;
 
-    height: auto;
-  
+  height: auto;
+
 }
+
 /* ========================================== */
 /* 7. 模块5 & 6：左右图文混排
 /* ========================================== */
 .split-block {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: center;
-    margin-bottom: 100px;
-   
-    margin-left: auto;
-    margin-right: auto;
-    
-    width: min(1200px,92%);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  margin-bottom: 100px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  width: min(1200px, 92%);
 }
 
 
 
 .split-title {
-    font-size: 2em;
-    font-weight: 450;
-    letter-spacing: 1px;
-    color: #111;
-    margin-bottom: 20px;
+  font-size: 2em;
+  font-weight: 450;
+  letter-spacing: 1px;
+  color: #111;
+  margin-bottom: 20px;
 }
 
 .split-description {
-    font-size: 15px;
-    line-height: 1.7;
-    color: #444;
-    margin-bottom: 25px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 25px;
 }
 
 .split-link {
-    color: #111;
-    text-decoration: none;
-    font-size: 13px;
-    letter-spacing: 1px;
-    border-bottom: 1px solid #aaaaaa;
-    padding-bottom: 4px;
+  color: #111;
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 1px;
+  border-bottom: 1px solid #aaaaaa;
+  padding-bottom: 4px;
 }
 
 .split-link:hover {
-    opacity: 0.6;
+  opacity: 0.6;
 }
 
 /* 左边文字 + 右边图片（调换顺序） */
 .image-right .split-text {
-    order: 2;
+  order: 2;
 }
 
 .image-right .split-image {
-    order: 1;
-}
-/* ===== 横向滚动4张图 ===== */
-.horizontal{
-  position: relative;
-  width: 100%;
-  max-width: 1200px; /* 屏幕容器最大宽度 */
-  
-  margin: 100px auto;
-  
+  order: 1;
 }
 
-.horizontal-container{
+/* ===== 横向滚动4张图 ===== */
+.horizontal {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  /* 屏幕容器最大宽度 */
+
+  margin: 100px auto;
+
+}
+
+.horizontal-container {
   overflow: hidden;
 }
 
-.horizontal-track{
+.horizontal-track {
   display: flex;
   gap: 30px;
   transition: transform 0.4s ease;
 }
 
-.card{
+.card {
   flex: 0 0 calc((100% - 90px) / 4);
-  height:260px;
-  overflow:hidden;
+  height: 260px;
+  overflow: hidden;
 }
 
-.card img{
+.card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
   border-radius: 0px;
 }
+
 /* 左右箭头按钮 */
-.scroll-btn{
+.scroll-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -278,29 +289,29 @@
   border-radius: 0;
 }
 
-.scroll-btn.left{
+.scroll-btn.left {
   left: 0;
 }
 
-.scroll-btn.right{
+.scroll-btn.right {
   right: 0;
 }
 
 /* ===== 过渡 ===== */
-.section-transition{
-  height:120px;
-  background:linear-gradient(to bottom, transparent, #f5f5f5 50%, transparent);
+.section-transition {
+  height: 120px;
+  background: linear-gradient(to bottom, transparent, #f5f5f5 50%, transparent);
 }
 
-.product-info{
-  position:relative;
-    z-index:2;
-    color:#fff;
-    font-size:28px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    height:100%;
+.product-info {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 
 }
 
@@ -309,132 +320,145 @@
    ========================================================== */
 
 /* ---------- iPad Pro / 小屏电脑 ---------- */
-@media (max-width:1024px){
+@media (max-width:1024px) {
 
   /* ================= HERO ================= */
-  .hero-text{
-      font-size:38px;
-      text-align:center;
-      padding:0 40px;
+  .hero-text {
+    font-size: 38px;
+    text-align: center;
+    padding: 0 40px;
   }
-  
+
   /* ================= SPLIT SECTION ================= */
-  .split-section{
-     align-items:center;
-     max-width:520px;
-     margin:0 auto;
-     
+  .split-section {
+    align-items: center;
+    max-width: 520px;
+    margin: 0 auto;
+
   }
-  
-  .split-section .container{
-      flex-direction:column;
-      gap:60px; /* ↑ 更松 */
-      padding:0 40px;
-      text-align: center;
+
+  .split-section .container {
+    flex-direction: column;
+    gap: 60px;
+    /* ↑ 更松 */
+    padding: 0 40px;
+    text-align: center;
   }
-  
+
   /* 图优先放大 */
-  .split-section .split-image{
-      width:100%;
-      max-width:900px;
-      
-      margin-left: 0 !important;
+  .split-section .split-image {
+    width: 100%;
+    max-width: 900px;
+
+    margin-left: 0 !important;
   }
-  .split-image img{
-    width:100%;
-    height:auto;
-    display:block;
-    object-fit:cover;
-}
-  .split-section .split-image img{
-      
-      aspect-ratio:4/5; /* ⭐ 关键：避免高度死锁 */
-      
+
+  .split-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
   }
-  
+
+  .split-section .split-image img {
+
+    aspect-ratio: 4/5;
+    /* ⭐ 关键：避免高度死锁 */
+
+  }
+
   /* 文字变窄 + 更集中 */
-  .split-content{
-      max-width:520px;   /* ↓ 变窄 */
-      width:100%;
-      margin:0 auto;
-      font-size:14px;
-      line-height:1.75;
+  .split-content {
+    max-width: 520px;
+    /* ↓ 变窄 */
+    width: 100%;
+    margin: 0 auto;
+    font-size: 14px;
+    line-height: 1.75;
   }
-  
+
   /* 标题更克制 */
-  .split-content h2{
-      font-size:28px;
-      margin-bottom:20px;
-      text-align:center;
+  .split-content h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
   }
-  
+
   /* ================= NEWS CARD ================= */
-  .news-card-inner{
-    flex-direction:column;
-    text-align:center;
-    gap:40px;
-}
-  .news-card{
-      flex-direction:column;
-      padding:100px 80px;
-      gap:60px;
+  .news-card-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
   }
-  
+
+  .news-card {
+    flex-direction: column;
+    padding: 100px 80px;
+    gap: 60px;
+  }
+
   /* 文本更窄 */
-  .news-content{
-      max-width:520px;
-      margin:0 auto;
-      
+  .news-content {
+    max-width: 520px;
+    margin: 0 auto;
+
   }
-  
-.news-image{
-    justify-content:center;
-}
-.news-image img{
-      width:100%;
-      
+
+  .news-image {
+    justify-content: center;
   }
-  
+
+  .news-image img {
+    width: 100%;
+
+  }
+
   /* ================= HORIZONTAL CAROUSEL ================= */
-  .horizontal{
-      margin:100px auto;
+  .horizontal {
+    margin: 100px auto;
   }
-  
-  .card{
-      flex:0 0 calc((100% - 40px) / 2); /* 两张但更大 */
-      height:320px; /* ↑ 比你现在更舒展 */
+
+  .horizontal-track {
+    gap: 20px;
   }
-  
+
+  .card {
+    flex: 0 0 calc((100% - 40px) / 3);
+    /* 两张但更大 */
+    height: 260px;
+    /* ↑ 比你现在更舒展 */
+  }
+
   /* ================= SPLIT BLOCK ================= */
-  .split-block{
-      grid-template-columns:1fr;
-      gap:60px;
-      margin-bottom:100px;
+  .split-block {
+    grid-template-columns: 1fr;
+    gap: 60px;
+    margin-bottom: 100px;
   }
-  
-  .image-right .split-text{
-      order:1;
+
+  .image-right .split-text {
+    order: 1;
   }
-  
-  .image-right .split-image{
-      order:2;
+
+  .image-right .split-image {
+    order: 2;
   }
-  
-  }
+
+}
 
 
 /* ---------- 手机 ---------- */
-@media (max-width:768px){
+@media (max-width:768px) {
 
   /* Hero */
 
-  .hero{
+  .hero {
 
-      height:70vh;
+    height: 70vh;
 
   }
 
-  .hero-text{
+  .hero-text {
     position: absolute;
     inset: 0;
     display: flex;
@@ -442,144 +466,152 @@
     justify-content: center;
     text-align: center;
     transform: translateY(2px);
-}
-.hero-text h1{
-  margin: 0;
-  line-height: 1.1;
-}
+  }
 
-    img{
-        width:100%;
-        height:auto;
-        display:block;
-    }
-  
-    .split-section .container,
-    .news-card,
-    .split-block{
-        flex-direction:column;
-        grid-template-columns:1fr;
-    }
-  
-  
+  .hero-text h1 {
+    margin: 0;
+    line-height: 1.1;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .split-section .container,
+  .news-card,
+  .split-block {
+    flex-direction: column;
+    grid-template-columns: 1fr;
+  }
+
+
   /* 第一块 */
 
-  .split-section{
-      transform: none !important;
-      padding:60px 0;
+  .split-section {
+    transform: none !important;
+    padding: 60px 0;
 
   }
 
-  .split-section .container{
-      display: flex !important;
-      flex-direction: column !important;
-      align-items: center;
-      text-align: center;
-      padding:0 20px;
-      gap:30px;
-
-  }
-  .split-content{
-    max-width:100%;
-    padding:0 20px;
-}
-  .split-content h2{
-    
-      font-size:26px;
+  .split-section .container {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    gap: 30px;
 
   }
 
-  .split-content p{
+  .split-content {
+    max-width: 100%;
+    padding: 0 20px;
+  }
 
-      font-size:15px;
-      line-height:1.8;
+  .split-content h2 {
+
+    font-size: 26px;
 
   }
+
+  .split-content p {
+
+    font-size: 15px;
+    line-height: 1.8;
+
+  }
+
   .split-image img,
-  .news-image img{
-      height:auto !important;
-      max-height:none !important;
-      aspect-ratio:auto !important;
+  .news-image img {
+    height: auto !important;
+    max-height: none !important;
+    aspect-ratio: auto !important;
   }
+
   .split-section .split-image img,
-  .news-image img{
-      
-      max-height:none;
-      aspect-ratio:auto;
+  .news-image img {
+
+    max-height: none;
+    aspect-ratio: auto;
   }
-  .split-image{
-    width:100%;
-    max-width:100%;
-}
+
+  .split-image {
+    width: 100%;
+    max-width: 100%;
+  }
+
   /* 横向滚动 */
 
-  .horizontal{
+  .horizontal {
 
-      margin:60px auto;
-
-  }
-
-  .horizontal-track{
-
-      gap:15px;
+    margin: 30px auto;
 
   }
 
-  .card{
-    flex:0 0 100%;
-    height:auto;
-    aspect-ratio:16/10;
-    overflow:hidden;
-}
+  .horizontal-track {
 
-  .scroll-btn{
+    gap: 12px;
 
-      font-size:28px;
-      padding:0 10px;
+  }
+
+  .card {
+    flex: 0 0 calc((100% - 24px) / 2.5);
+    max-width: 160px;
+    height: 140px;
+    overflow: hidden;
+
+  }
+
+  .scroll-btn {
+
+    font-size: 28px;
+    padding: 0 10px;
 
   }
 
   /* News */
 
-  .news-card{
-      display: flex;
-      flex-direction: column;
-      padding:60px 20px;
-      gap:35px;
+  .news-card {
+    display: flex;
+    flex-direction: column;
+    padding: 60px 20px;
+    gap: 35px;
 
   }
 
-  .news-content h2{
+  .news-content h2 {
 
-      font-size:30px;
+    font-size: 30px;
 
   }
 
-  .news-content p{
+  .news-content p {
 
-      font-size:15px;
+    font-size: 15px;
 
   }
 
   /* Split Block */
 
-  .split-block{
+  .split-block {
 
-      display: grid;
-      grid-template-columns: 1fr;
-      margin-bottom:60px;
-
-  }
-
-  .split-title{
-
-      font-size:30px;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-bottom: 60px;
 
   }
 
-  .split-description{
+  .split-title {
 
-      font-size:15px;
+    font-size: 30px;
+
+  }
+
+  .split-description {
+
+    font-size: 15px;
 
   }
 
@@ -587,42 +619,44 @@
 
 
 /* ---------- 小屏手机 ---------- */
-@media (max-width:480px){
+@media (max-width:480px) {
 
-  .hero{
+  .hero {
 
-      height:auto;
-      min-height: 60vh;
-
-  }
-
-  .hero-text{
-
-      font-size:24px;
+    height: auto;
+    min-height: 60vh;
 
   }
 
-  .split-content h2{
+  .hero-text {
 
-      font-size:22px;
-
-  }
-
-  .news-content h2{
-
-      font-size:24px;
+    font-size: 24px;
 
   }
 
-  .split-title{
+  .split-content h2 {
 
-      font-size:24px;
+    font-size: 22px;
 
   }
 
-  .card{
-      aspect-ratio: 4/5;
-      height: 260px;
+  .news-content h2 {
+
+    font-size: 24px;
+
+  }
+
+  .split-title {
+
+    font-size: 24px;
+
+  }
+
+  .card {
+    flex: 0 0 calc((100% - 24px) / 2.5);
+    max-width: 160px;
+    height: 140px;
+    overflow: hidden;
 
   }
 

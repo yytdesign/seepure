@@ -23,7 +23,7 @@
     /* 保持你原来的视觉高度 */
     background: rgba(255, 255, 255, 0.35);
     backdrop-filter: blur(10px);
-    z-index: 3000;
+    z-index: 2998;
     transition: all 0.4s ease;
 }
 
@@ -234,7 +234,10 @@
     width: 200px;
     max-width: 88vw;
     height: 100vh;
-    background: #fff;
+      /* ===== 核心修改：半透明 + 毛玻璃模糊 ===== */
+    background: rgba(255, 255, 255, 0.75); /* 白色背景，0.75是透明度（可调） */
+    backdrop-filter: blur(30px);           /* 模糊半径，数值越大越模糊 */
+    -webkit-backdrop-filter: blur(20px);   /* 兼容 Safari 浏览器 */
     display: flex;
     flex-direction: column;
     padding: 120px 24px 24px;
@@ -291,7 +294,7 @@
     opacity: 0;
     visibility: hidden;
     transition: 0.25s ease;
-    z-index: 2998;
+    z-index: 3000;
 }
 
 .mobile-overlay.active {
