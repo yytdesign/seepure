@@ -4,16 +4,13 @@ function loadComponent(name, targetId) {
     // 判断当前是否中文页面
     const isChinese = window.location.pathname.includes("/cn/");
 
-
     let componentName = name;
     let componentPath = "components/";
-
 
     // 中文页面
     if (isChinese) {
 
         componentName = `${name}-cn`;
-
         componentPath = "../components/";
 
     } 
@@ -36,33 +33,16 @@ function loadComponent(name, targetId) {
 
             if (!el) return;
 
-
             el.innerHTML = html;
-
-
-            // Header加载完成后的功能
-            if (name === 'header') {
-
-                // 这里保持你原来的header初始化
-                if(typeof initHeaderScroll === "function"){
-                    initHeaderScroll();
-                }
-
-
-                if(typeof initMobileMenu === "function"){
-                    initMobileMenu();
-                }
-
-            }
-
 
         })
 
         .catch(error => {
+
             console.error("Component loading error:", error);
+
         });
 }
-
 function adjustBodyPadding() {
     const header = document.querySelector('.header');
     if (!header) return;
@@ -87,34 +67,72 @@ function initHeaderScroll() {
     toggle();
     window.addEventListener('scroll', toggle);
 }
+// ================= MOBILE MENU =================
 function initMobileMenu() {
+
 
     const toggle = document.querySelector(".menu-toggle");
     const menu = document.querySelector(".mobile-menu");
     const overlay = document.querySelector(".mobile-overlay");
 
-    console.log('menu init:', toggle, menu, overlay);
 
-    if (!toggle || !menu || !overlay) return;
+    if (!toggle || !menu || !overlay) {
+        console.log("Mobile menu elements missing");
+        return;
+    }
 
-    function closeMenu() {
+
+    // 防止重复绑定
+    if(toggle.dataset.initialized){
+        return;
+    }
+
+    toggle.dataset.initialized = "true";
+
+
+    function openMenu(){
+
+        toggle.classList.add("active");
+        menu.classList.add("active");
+        overlay.classList.add("active");
+
+    }
+
+
+    function closeMenu(){
+
         toggle.classList.remove("active");
         menu.classList.remove("active");
         overlay.classList.remove("active");
+
     }
 
-    toggle.addEventListener("click", () => {
-        console.log("clicked");
-        toggle.classList.toggle("active");
-        menu.classList.toggle("active");
-        overlay.classList.toggle("active");
+
+    toggle.addEventListener("click", function(){
+
+        if(menu.classList.contains("active")){
+
+            closeMenu();
+
+        }else{
+
+            openMenu();
+
+        }
+
     });
+
 
     overlay.addEventListener("click", closeMenu);
 
-    menu.querySelectorAll("a").forEach(link => {
+
+    menu.querySelectorAll("a").forEach(link=>{
+
         link.addEventListener("click", closeMenu);
+
     });
+
+
 }
 
 // ================= PRODUCT CAROUSEL (FINAL) =================
