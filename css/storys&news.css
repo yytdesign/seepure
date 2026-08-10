@@ -299,12 +299,12 @@
 
     .card-large {
         grid-column: 1 / -1;
-        padding: 0 25px;
+        padding: 0 10px;
     }
 
     .cards-column {
         gap: 18px;
-        padding: 0 25px;
+        padding: 0 10px;
     }
 
 }
@@ -417,7 +417,7 @@
 
     .grid-layout {
 
-        padding: 16px;
+        padding: 10px;
 
         gap: 22px;
 
@@ -437,7 +437,7 @@
 
     .card-small .content-small h3 {
 
-        font-size: 14px;
+        font-size: 18px;
 
     }
 

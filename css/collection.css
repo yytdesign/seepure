@@ -193,7 +193,7 @@ section:first-of-type{
   }
   
   .product-image {
-      height: 320px;
+      height: 220px;
   }
   
   .product-card h3 {
@@ -202,5 +202,16 @@ section:first-of-type{
   
   .product-card span {
       font-size: 12px;
+  }
+  .editorial-title {
+    font-size:28px;
+  margin-bottom:40px;
+  }
+  .editorial-text {
+    max-width:300px;
+    margin:0 auto;
+    text-align: center;
+    line-height:1.8;
+    color:#555;
   }
 }

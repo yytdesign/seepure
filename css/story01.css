@@ -172,7 +172,7 @@ body{
 /* ===== FORCE FIX: 一大一小（最高优先级）===== */
 .image-split.fix{
     display:grid !important;
-    grid-template-columns: 1.7fr 1fr !important;
+    grid-template-columns: 1.7fr 1fr;
     gap:40px !important;
     align-items:start;
 }
@@ -369,7 +369,7 @@ body{
 
         padding:0 20px;
     }
-
+    
     .image-split .right{
 
         display:block;
