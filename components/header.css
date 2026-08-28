@@ -231,7 +231,7 @@
     top: 0;
     right: 0;
     left: auto;
-    width: 200px;
+    width: 150px; /* 下来菜单的宽度 */
     max-width: 88vw;
     height: 100vh;
       /* ===== 核心修改：半透明 + 毛玻璃模糊 ===== */

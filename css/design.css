@@ -207,7 +207,9 @@
     .split-title {
         font-size: 1.4em;
     }
-
+    .split-text {
+        padding: 0 25px;
+    }
     .split-description {
         font-size: 14px;
     }
@@ -223,7 +225,7 @@
     }
 
     .split-block {
-        padding: 0 10px;
+        padding: 0 20px;
         gap: 10px;
     }
 

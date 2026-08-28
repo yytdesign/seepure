@@ -1,6 +1,4 @@
-
-
-   * {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -102,8 +100,15 @@ body {
 }
 
 @keyframes bounce {
-    0%, 100% { transform: translateX(-50%) translateY(0); }
-    50% { transform: translateX(-50%) translateY(10px); }
+
+    0%,
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    50% {
+        transform: translateX(-50%) translateY(10px);
+    }
 }
 
 /* ========== 第二屏：左大图 + 右小图 ========== */
@@ -129,20 +134,20 @@ body {
     height: auto;
     display: block;
     object-fit: cover;
-    border-radius: 0;
+    
 }
 
 .img-small {
     width: 100%;
     overflow: hidden;
-    border-radius: 0;
+    
 }
 
 .img-small img {
     width: 100%;
     height: auto;
     display: block;
-    border-radius: 0;
+   
 }
 
 .caption {
@@ -288,7 +293,7 @@ body {
     margin: 0;
     overflow: hidden;
     background: #1e1b17;
-    border-radius: 0;
+    
 }
 
 .full-width-video video {
@@ -296,7 +301,7 @@ body {
     display: block;
     aspect-ratio: 16 / 9;
     object-fit: cover;
-    border-radius: 0;
+    
 }
 
 .video-caption-wide {
@@ -309,6 +314,7 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
+
 /* 占位图通用样式 — 保持图片区域整洁 */
 img {
     display: block;
@@ -318,321 +324,327 @@ img {
 .card img {
     background: #e2d8cd;
 }
+
 /* ========== 响应式适配 ========== */
 /* ==========================================
 1400px
 ========================================== */
 
-@media (max-width:1400px){
+@media (max-width:1400px) {
 
-    .container{
-    
-        width:92%;
-    
+    .container {
+
+        width: 92%;
+
     }
-    
-    .hero-text{
-    
-        max-width:700px;
-    
+
+    .hero-text {
+
+        max-width: 700px;
+
     }
-    
-    .hero-text h1{
-    
-        font-size:3rem;
-    
+
+    .hero-text h1 {
+
+        font-size: 3rem;
+
     }
-    
+
     .centered-quote,
-    .finn-juhl-quote{
-    
-        max-width:760px;
-    
+    .finn-juhl-quote {
+
+        max-width: 760px;
+
     }
-    
-    }
-    /* ==========================================
+
+}
+
+/* ==========================================
 1200px
 ========================================== */
 
-@media (max-width:1200px){
+@media (max-width:1200px) {
 
     .two-col-large-left,
-    .two-col-small-left{
-    
-        gap:40px;
-    
+    .two-col-small-left {
+
+        gap: 40px;
+
     }
-    
-    .hero-text h1{
-    
-        font-size:2.8rem;
-    
+
+    .hero-text h1 {
+
+        font-size: 2.8rem;
+
     }
-    
-    .video-page-text{
-    
-        max-width:720px;
-    
+
+    .video-page-text {
+
+        max-width: 720px;
+
     }
-    
-    }
+
+}
+
 /* ==========================================
 992px
 ========================================== */
 
-@media (max-width:992px){
+@media (max-width:992px) {
 
-    .container{
-    
-        width:94%;
-    
+    .container {
+
+        width: 94%;
+
     }
-    
-    .two-col-large-left{
-    
-        grid-template-columns:1.1fr 0.9fr;
-    
+
+    .two-col-large-left {
+
+        grid-template-columns: 1.1fr 0.9fr;
+
     }
-    
-    .two-col-small-left{
-    
-        grid-template-columns:0.9fr 1.1fr;
-    
+
+    .two-col-small-left {
+
+        grid-template-columns: 0.9fr 1.1fr;
+
     }
-    
-    .hero-text{
-    
-        max-width:620px;
-    
+
+    .hero-text {
+
+        max-width: 620px;
+
     }
-    
-    .hero-text h1{
-    
-        font-size:2.4rem;
-    
+
+    .hero-text h1 {
+
+        font-size: 2.4rem;
+
     }
-    
-    .centered-quote h2{
-    
-        font-size:1.9rem;
-    
+
+    .centered-quote h2 {
+
+        font-size: 1.9rem;
+
     }
-    
-    .finn-juhl-quote blockquote{
-    
-        font-size:1.3rem;
-    
+
+    .finn-juhl-quote blockquote {
+
+        font-size: 1.3rem;
+
     }
-    
-    .video-page-text h3{
-    
-        font-size:1.8rem;
-    
+
+    .video-page-text h3 {
+
+        font-size: 1.8rem;
+
     }
-    
-    }
-    /* ==========================================
+
+}
+
+/* ==========================================
 768px
 ========================================== */
 
-@media (max-width:768px){
+@media (max-width:768px) {
+    
+    .screen {
 
-    .screen{
-    
-        min-height:auto;
-    
-        padding:80px 0;
-    
+        min-height: auto;
+
+        padding: 80px 0;
+
     }
-    
-    .container{
-    
-        width:92%;
-    
+
+    .container {
+
+        width: 92%;
+
     }
-    
+
     .two-col-large-left,
-    .two-col-small-left{
-    
-        grid-template-columns:1fr;
-    
-        gap:30px;
-    
+    .two-col-small-left {
+
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+
     }
-    
+
     .img-large,
-    .img-small{
-    
-        order:1;
-    
+    .img-small {
+        width: 100%;
+        order: 1;
+        
+
     }
-    
-    .caption{
-    
-        margin-top:14px;
-    
+
+    .caption {
+
+        margin-top: 14px;
+
     }
-    
-    .hero-text{
-    
-        padding:20px;
-    
+
+    .hero-text {
+
+        padding: 20px;
+
     }
-    
-    .hero-text h1{
-    
-        font-size:2rem;
-    
-        line-height:1.2;
-    
+
+    .hero-text h1 {
+
+        font-size: 2rem;
+
+        line-height: 1.2;
+
     }
-    
-    .hero-text p{
-    
-        font-size:1rem;
-    
+
+    .hero-text p {
+
+        font-size: 1rem;
+
     }
-    
-    .centered-quote{
-    
-        padding:10px;
-    
+
+    .centered-quote {
+
+        padding: 10px;
+
     }
-    
-    .centered-quote h2{
-    
-        font-size:1.7rem;
-    
+
+    .centered-quote h2 {
+
+        font-size: 1.7rem;
+
     }
-    
-    .centered-quote p{
-    
-        font-size:1rem;
-    
+
+    .centered-quote p {
+
+        font-size: 1rem;
+
     }
-    
-    .finn-juhl-quote{
-    
-        padding:10px;
-    
+
+    .finn-juhl-quote {
+
+        padding: 10px;
+
     }
-    
-    .finn-juhl-quote h2{
-    
-        font-size:1.7rem;
-    
+
+    .finn-juhl-quote h2 {
+
+        font-size: 1.7rem;
+
     }
-    
-    .finn-juhl-quote blockquote{
-    
-        font-size:1.15rem;
-    
-        padding-left:18px;
-    
+
+    .finn-juhl-quote blockquote {
+
+        font-size: 1.15rem;
+
+        padding-left: 18px;
+
     }
-    
-    .video-page-text{
-    
-        padding:0 20px;
-    
+
+    .video-page-text {
+
+        padding: 0 20px;
+
     }
-    
-    .video-page-text h3{
-    
-        font-size:1.5rem;
-    
+
+    .video-page-text h3 {
+
+        font-size: 1.5rem;
+
     }
-    
-    .video-page-text p{
-    
-        font-size:.95rem;
-    
+
+    .video-page-text p {
+
+        font-size: .95rem;
+
     }
-    
-    .full-width-video video{
-    
-        aspect-ratio:16/10;
-    
+
+    .full-width-video video {
+
+        aspect-ratio: 16/10;
+
     }
-    
-    }
+
+}
+
 /* ==========================================
 576px
 ========================================== */
 
-@media (max-width:576px){
+@media (max-width:576px) {
 
-    .hero-text{
-    
-        padding:15px;
-    
+    .hero-text {
+
+        padding: 15px;
+
     }
-    
-    .hero-text h1{
-    
-        font-size:1.6rem;
-    
+
+    .hero-text h1 {
+
+        font-size: 1.6rem;
+
     }
-    
-    .hero-text p{
-    
-        font-size:.92rem;
-    
+
+    .hero-text p {
+
+        font-size: .92rem;
+
     }
-    
-    .centered-quote h2{
-    
-        font-size:1.45rem;
-    
+
+    .centered-quote h2 {
+
+        font-size: 1.45rem;
+
     }
-    
-    .centered-quote p{
-    
-        font-size:.92rem;
-    
+
+    .centered-quote p {
+
+        font-size: .92rem;
+
     }
-    
-    .finn-juhl-quote h2{
-    
-        font-size:1.45rem;
-    
+
+    .finn-juhl-quote h2 {
+
+        font-size: 1.45rem;
+
     }
-    
-    .finn-juhl-quote p{
-    
-        font-size:.92rem;
-    
+
+    .finn-juhl-quote p {
+
+        font-size: .92rem;
+
     }
-    
-    .finn-juhl-quote blockquote{
-    
-        font-size:1rem;
-    
+
+    .finn-juhl-quote blockquote {
+
+        font-size: 1rem;
+
     }
-    
-    .video-page-text{
-    
-        padding:0 16px;
-    
+
+    .video-page-text {
+
+        padding: 0 16px;
+
     }
-    
-    .video-page-text h3{
-    
-        font-size:1.3rem;
-    
+
+    .video-page-text h3 {
+
+        font-size: 1.3rem;
+
     }
-    
-    .video-page-text p{
-    
-        font-size:.9rem;
-    
+
+    .video-page-text p {
+
+        font-size: .9rem;
+
     }
-    
-    .scroll-hint{
-    
-        display:none;
-    
+
+    .scroll-hint {
+
+        display: none;
+
     }
-    
-    }
+
+}
