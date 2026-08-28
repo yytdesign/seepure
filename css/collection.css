@@ -162,6 +162,7 @@ section:first-of-type{
   
   .product-image {
       height: 320px;
+      
   }
 }
 
@@ -182,7 +183,7 @@ section:first-of-type{
 
 @media (max-width: 768px) {
   .product-grid {
-      grid-template-columns: 1fr;
+      grid-template-columns: repeat(2, 1fr);
       gap: 20px;
       padding: 0 15px;
       margin: 40px auto 0;
