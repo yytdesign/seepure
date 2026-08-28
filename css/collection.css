@@ -173,11 +173,11 @@ section:first-of-type{
   }
   
  .large {
-      grid-column: span 1;
+      grid-column: span 2;
   }
   
   .product-image {
-      height: 350px;
+      height: 320px;
   }
 }
 
