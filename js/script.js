@@ -13,8 +13,8 @@ function loadComponent(name, targetId) {
         componentName = `${name}-cn`;
         componentPath = "../components/";
 
-    } 
-    
+    }
+
     // 英文页面
     else {
 
@@ -83,14 +83,14 @@ function initMobileMenu() {
 
 
     // 防止重复绑定
-    if(toggle.dataset.initialized){
+    if (toggle.dataset.initialized) {
         return;
     }
 
     toggle.dataset.initialized = "true";
 
 
-    function openMenu(){
+    function openMenu() {
 
         toggle.classList.add("active");
         menu.classList.add("active");
@@ -99,7 +99,7 @@ function initMobileMenu() {
     }
 
 
-    function closeMenu(){
+    function closeMenu() {
 
         toggle.classList.remove("active");
         menu.classList.remove("active");
@@ -108,13 +108,13 @@ function initMobileMenu() {
     }
 
 
-    toggle.addEventListener("click", function(){
+    toggle.addEventListener("click", function () {
 
-        if(menu.classList.contains("active")){
+        if (menu.classList.contains("active")) {
 
             closeMenu();
 
-        }else{
+        } else {
 
             openMenu();
 
@@ -126,7 +126,7 @@ function initMobileMenu() {
     overlay.addEventListener("click", closeMenu);
 
 
-    menu.querySelectorAll("a").forEach(link=>{
+    menu.querySelectorAll("a").forEach(link => {
 
         link.addEventListener("click", closeMenu);
 
@@ -135,7 +135,7 @@ function initMobileMenu() {
 
 }
 
-// ================= PRODUCT CAROUSEL (FINAL) =================
+// ================= PRODUCT CAROUSEL =================
 function initProductCarousel() {
 
     const mainImage = document.getElementById('mainImage');
@@ -161,18 +161,22 @@ function initProductCarousel() {
     const nextBtn = document.getElementById('nextBtn');
     const numbersWrap = document.getElementById('imageNumbers');
 
-    // ===== auto build numbers =====
+    // ===== 自动生成图片编号 =====
     if (numbersWrap) {
+
         numbersWrap.innerHTML = images.map((_, i) => `
             <span class="num ${i === 0 ? 'active' : ''}" data-index="${i}">
                 ${String(i + 1).padStart(2, '0')}
             </span>
         `).join('');
+
     }
 
     const nums = document.querySelectorAll('.image-numbers .num');
 
+    // ===== 图片切换 =====
     function render(i) {
+
         index = (i + images.length) % images.length;
 
         mainImage.src = images[index];
@@ -181,16 +185,61 @@ function initProductCarousel() {
             counter.textContent = `${index + 1} / ${images.length}`;
         }
 
-        nums.forEach((n, i) => n.classList.toggle('active', i === index));
+        nums.forEach((n, i) => {
+            n.classList.toggle('active', i === index);
+        });
+
     }
 
-    prevBtn?.addEventListener('click', () => render(index - 1));
-    nextBtn?.addEventListener('click', () => render(index + 1));
-
-    nums.forEach(n => {
-        n.addEventListener('click', () => render(+n.dataset.index));
+    // ===== 左右箭头 =====
+    prevBtn?.addEventListener('click', () => {
+        render(index - 1);
     });
 
+    nextBtn?.addEventListener('click', () => {
+        render(index + 1);
+    });
+
+    // ===== 底部图片编号 =====
+    nums.forEach(n => {
+
+        n.addEventListener('click', () => {
+            render(+n.dataset.index);
+        });
+
+    });
+
+    // =================================================
+    // 材料缩略图
+    // 点击材料纹理 → 切换左侧产品图片
+    // =================================================
+
+    const materialImages = document.querySelectorAll(
+        '.material-option img[data-index]'
+    );
+
+    materialImages.forEach(img => {
+
+        img.addEventListener('click', function (e) {
+
+            // 防止点击图片触发其它事件
+            e.stopPropagation();
+
+            const materialIndex = Number(this.dataset.index);
+
+            if (
+                Number.isInteger(materialIndex) &&
+                materialIndex >= 0 &&
+                materialIndex < images.length
+            ) {
+                render(materialIndex);
+            }
+
+        });
+
+    });
+
+    // ===== 初始图片 =====
     render(0);
 }
 // ================= HORIZONTAL SLIDER =================
@@ -301,7 +350,7 @@ const accordionHeaders = document.querySelectorAll(".accordion-header");
 
 accordionHeaders.forEach(header => {
 
-    header.addEventListener("click", function(){
+    header.addEventListener("click", function () {
 
         const item = this.parentElement;
 
