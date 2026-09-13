@@ -71,19 +71,39 @@ body {
 .nav-btn {
     width: 40px;
     height: 40px;
+
     background: rgba(255, 255, 255, 0.9);
+
     border: 1px solid #ddd;
     border-radius: 0;
+
     cursor: pointer;
+
     font-size: 18px;
-    color:#111;
-    
-    
+    color: #111;
+
+    /* 关键：取消手机浏览器默认按钮样式 */
+    -webkit-appearance: none;
+    appearance: none;
+
+    /* 防止文字颜色被系统控制 */
+    -webkit-text-fill-color: #111;
+
+    /* 防止点击时出现系统高亮 */
+    -webkit-tap-highlight-color: transparent;
 }
 
 .nav-btn:hover {
     background: #fff;
     border-color: #999;
+    color: #111;
+    
+}
+.nav-btn:focus,
+.nav-btn:active {
+    color: #111;
+    -webkit-text-fill-color: #111;
+    outline: none;
 }
 
 /* 右侧产品信息 */
@@ -646,12 +666,23 @@ body {
 
 @media (max-width: 768px) {
 
+     .product-container {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .product-images {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
     .section-subtitle,
     .revolution-left .section-subtitle,
     .split-title,
     .partners-title {
         font-size: 22px;
-
     }
 
     .revolution-text,
@@ -670,10 +701,13 @@ body {
         font-size: 14px;
     }
 
+    /* 手机端产品信息不要再额外增加左右 40px */
     .product-info,
     .revolution-left {
         padding: 30px 0;
     }
+
+    /* 产品图片区保持完整居中 */
     .product-images {
         width: 100%;
         margin: 0 auto;
@@ -683,9 +717,11 @@ body {
         width: 100%;
     }
 
+    /* 其它模块统一手机端左右间距 */
     .experiment-section {
         padding: 30px 20px;
     }
+
     .split-block {
         padding-left: 20px;
         padding-right: 20px;
